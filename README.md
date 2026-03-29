@@ -69,8 +69,6 @@ All repositories are released under the **MIT License** and they are provided **
 
 <!-- REPO-LIST:START -->
 
-Automatically generated from my public GitHub repositories (19 current projects).
-
 ### Coastal & Maritime Hydraulic Design
 
 Breakwater design, coastal protection, navigation safety, overtopping, and applied maritime hydraulic engineering.
