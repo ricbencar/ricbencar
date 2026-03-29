@@ -26,8 +26,6 @@
 
 I am a civil engineer working in **port and coastal engineering, maritime hydraulics, wave mechanics, and technical computation**. My GitHub profile is centered on **practical engineering tools** for metocean analysis, nonlinear wave calculation, hydraulic design, navigation studies, and technical workflow automation.
 
-The repositories on this profile are intended for **real engineering use**: design support, hydraulic verification, numerical analysis, preprocessing and postprocessing of metocean data, and reproducible technical documentation.
-
 The work published here covers a broad technical range, including **wave dispersion and nonlinear wave solvers**, **ERA5-based wave and wind data workflows**, **metocean statistics**, **storm peak and trend analysis**, **extreme value assessment**, **environmental contours**, and **joint probability modelling**. It also includes tools for **offshore-to-nearshore wave transposition**, **shallow-foreshore wave transformation**, and **wave overtopping prediction** for coastal and maritime applications.
 
 In addition, this profile includes computational tools for **hydraulic design of breakwaters, rock slopes, artificial armor units, and depth of closure**, as well as **navigation and under-keel-clearance studies** and **PIANC-based ship-dimension assessment**. Some repositories are focused on **wave loading and fluid-structure interaction**, while others support engineering workflows through **technical document conversion, translation, glossary generation, data export, and other productivity utilities** intended to make technical work more consistent, traceable, and efficient.
