@@ -22,7 +22,7 @@
 
 ---
 
-## Brief Profile
+## Profile
 
 I am a civil engineer working in **port and coastal engineering, maritime hydraulics, wave mechanics, and technical computation**. My GitHub profile is centered on **practical engineering tools** for metocean analysis, nonlinear wave calculation, hydraulic design, navigation studies, and technical workflow automation.
 
