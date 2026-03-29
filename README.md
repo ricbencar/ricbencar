@@ -153,9 +153,3 @@ Utilities for technical documentation, translation, glossary generation, and eng
 <!-- REPO-LIST:END -->
 
 ---
-
-## Connect
-
-- **LinkedIn:** [ricardo-benoliel-de-carvalho](https://www.linkedin.com/in/ricardo-benoliel-de-carvalho/)
-- **GitHub:** [ricbencar](https://github.com/ricbencar)
-- **Email:** [ricbenoliel@gmail.com](mailto:ricbenoliel@gmail.com)
