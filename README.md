@@ -32,7 +32,7 @@ The work published here covers a broad technical range, including **wave dispers
 
 In addition, this profile includes computational tools for **hydraulic design of breakwaters, rock slopes, artificial armor units, and depth of closure**, as well as **navigation and under-keel-clearance studies** and **PIANC-based ship-dimension assessment**. Some repositories are focused on **wave loading and fluid-structure interaction**, while others support engineering workflows through **technical document conversion, translation, glossary generation, data export, and other productivity utilities** intended to make technical work more consistent, traceable, and efficient.
 
-Although all repositories are released under the **MIT License**, they are provided **as is**, without any warranty of accuracy, completeness, fitness for a particular purpose, or suitability for project-critical decisions. They should therefore be used **at the user’s own risk**, with appropriate engineering judgment, independent verification, and technical review before application in professional studies, design, or operational contexts.
+All repositories are released under the **MIT License** and they are provided **as is**, without any warranty of accuracy, completeness, fitness for a particular purpose, or suitability for project-critical decisions. They should therefore be used **at the user’s own risk**, with appropriate engineering judgment, independent verification, and technical review before application in professional studies, design, or operational contexts.
 
 ---
 
