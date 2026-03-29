@@ -6,10 +6,11 @@ import sys
 import urllib.request
 from collections import defaultdict
 from datetime import datetime
+from pathlib import Path
 from typing import Iterable
 
 USERNAME = os.environ.get("GITHUB_USERNAME", "ricbencar")
-README_PATH = "README.md"
+README_PATH = Path(__file__).resolve().parents[2] / "README.md"
 
 START_MARKER = "<!-- REPO-LIST:START -->"
 END_MARKER = "<!-- REPO-LIST:END -->"
@@ -110,10 +111,9 @@ def github_api_get(url: str, token: str | None = None):
     if token:
         headers["Authorization"] = f"Bearer {token}"
 
-    req = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(req) as response:
+    request = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(request) as response:
         return json.loads(response.read().decode("utf-8"))
-
 
 
 def fetch_repositories(username: str, token: str | None = None) -> list[dict]:
@@ -142,7 +142,6 @@ def fetch_repositories(username: str, token: str | None = None) -> list[dict]:
     ]
 
 
-
 def clean_description(desc: str | None) -> str:
     if not desc:
         return "Repository description to be added."
@@ -152,10 +151,8 @@ def clean_description(desc: str | None) -> str:
     return desc
 
 
-
 def normalize_text(parts: Iterable[str]) -> str:
     return " ".join(part.strip().lower() for part in parts if part).strip()
-
 
 
 def pick_category(repo: dict) -> str:
@@ -180,7 +177,6 @@ def pick_category(repo: dict) -> str:
     return best_category
 
 
-
 def format_date(iso_value: str | None) -> str:
     if not iso_value:
         return "unknown"
@@ -191,24 +187,18 @@ def format_date(iso_value: str | None) -> str:
         return iso_value[:10]
 
 
-
 def repo_meta_line(repo: dict) -> str:
     parts: list[str] = []
-    language = repo.get("language")
-    if language:
-        parts.append(f"Language: `{language}`")
-    updated_at = format_date(repo.get("updated_at"))
-    parts.append(f"Updated: `{updated_at}`")
-    stars = repo.get("stargazers_count", 0)
-    if stars:
-        parts.append(f"Stars: `{stars}`")
+    if repo.get("language"):
+        parts.append(f"Language: `{repo['language']}`")
+    parts.append(f"Updated: `{format_date(repo.get('updated_at'))}`")
+    if repo.get("stargazers_count", 0):
+        parts.append(f"Stars: `{repo['stargazers_count']}`")
     return " · ".join(parts)
-
 
 
 def build_section(repos: list[dict]) -> str:
     grouped: dict[str, list[dict]] = defaultdict(list)
-
     for repo in repos:
         grouped[pick_category(repo)].append(repo)
 
@@ -222,11 +212,10 @@ def build_section(repos: list[dict]) -> str:
         ordered_categories.append(FALLBACK_CATEGORY)
 
     lines: list[str] = []
-    total_repos = len(repos)
     lines.append("## Repositories")
     lines.append("")
     lines.append(
-        f"Automatically generated from my public GitHub repositories ({total_repos} current projects)."
+        f"Automatically generated from my public GitHub repositories ({len(repos)} current projects)."
     )
     lines.append("")
 
@@ -236,7 +225,6 @@ def build_section(repos: list[dict]) -> str:
             continue
 
         items.sort(key=lambda r: (r.get("updated_at", ""), r.get("stargazers_count", 0)), reverse=True)
-
         lines.append(f"### {category}")
         lines.append("")
         intro = SECTION_INTROS.get(category)
@@ -245,23 +233,17 @@ def build_section(repos: list[dict]) -> str:
             lines.append("")
 
         for repo in items:
-            name = repo["name"]
-            html_url = repo["html_url"]
-            desc = clean_description(repo.get("description"))
-            meta = repo_meta_line(repo)
-            lines.append(f"- [**{name}**]({html_url})")
-            lines.append(f"  {desc}")
-            lines.append(f"  {meta}")
+            lines.append(f"- [**{repo['name']}**]({repo['html_url']})")
+            lines.append(f"  {clean_description(repo.get('description'))}")
+            lines.append(f"  {repo_meta_line(repo)}")
             lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
 
 
-
 def replace_between_markers(readme_text: str, new_section: str) -> str:
     start = readme_text.find(START_MARKER)
     end = readme_text.find(END_MARKER)
-
     if start == -1 or end == -1 or end < start:
         raise RuntimeError("README markers not found.")
 
@@ -270,21 +252,16 @@ def replace_between_markers(readme_text: str, new_section: str) -> str:
     return before + "\n\n" + new_section + "\n" + after
 
 
-
 def main() -> int:
     token = os.environ.get("GH_TOKEN")
     repos = fetch_repositories(USERNAME, token=token)
     section = build_section(repos)
 
-    with open(README_PATH, "r", encoding="utf-8") as f:
-        readme = f.read()
-
+    readme = README_PATH.read_text(encoding="utf-8")
     updated = replace_between_markers(readme, section)
+    README_PATH.write_text(updated, encoding="utf-8", newline="\n")
 
-    with open(README_PATH, "w", encoding="utf-8", newline="\n") as f:
-        f.write(updated)
-
-    print(f"Updated README with {len(repos)} repositories.")
+    print(f"Updated {README_PATH} with {len(repos)} repositories.")
     return 0
 
 
