@@ -26,9 +26,13 @@
 
 I am a 55 years old, civil engineer working in **port and coastal engineering, maritime hydraulics, wave mechanics, and technical computation**. My GitHub profile is centered on **practical engineering tools** for metocean analysis, nonlinear wave calculation, hydraulic design, navigation studies, and technical workflow automation.
 
-The work published here covers a broad technical range, including **wave dispersion and nonlinear wave solvers**, **ERA5-based wave and wind data workflows**, **metocean statistics**, **storm peak and trend analysis**, **extreme value assessment**, **environmental contours**, and **joint probability modelling**. It also includes tools for **offshore-to-nearshore wave transposition**, **shallow-foreshore wave transformation**, and **wave overtopping prediction** for coastal and maritime applications.
+Here is a more polished and better-structured version:
 
-It also includes computational tools for **hydraulic design of breakwaters and rock slopes for coastal protection**, as well as **navigation and under-keel-clearance studies** and **PIANC-based ship-dimension assessment**. Some repositories are focused on **wave loading and fluid-structure interaction**, while others support engineering workflows through **technical document conversion, translation, glossary generation, data export, and other productivity utilities** intended to make technical work more consistent, traceable, and efficient.
+The work published here spans a **broad and technical range of engineering topics**. It includes **wave dispersion and nonlinear wave solvers**, **ERA5-based workflows for wave and wind data**, **metocean statistics**, **storm peak and trend analysis**, **extreme value assessment**, **environmental contour generation**, and **joint probability modelling**. It also covers tools for **offshore-to-nearshore wave transposition**, **wave transformation over shallow foreshores**, and **wave overtopping prediction** for a range of **coastal and maritime engineering applications**.
+
+In addition, it also includes **computational tools for the hydraulic design of breakwaters and rock slopes used in coastal protection**, as well as applications for **navigation studies**, **under-keel clearance assessment**, and **PIANC-based ship-dimension analysis** and **wave loading on piles**. Some repositories focus on engineering workflows through **technical document conversion**, **translation**, **glossary generation**, **data export**, and related productivity tools.
+
+Together, these repositories are intended to support **more consistent, traceable, efficient, and professionally robust technical work**.
 
 All repositories are released under the **MIT License** and they are provided **as is**, without any warranty of accuracy, completeness, fitness for a particular purpose, or suitability for project-critical decisions. They should therefore be used **at the user’s own risk**, with appropriate engineering judgment, independent verification, and technical review before application in professional studies, design, or operational contexts.
 
