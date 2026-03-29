@@ -57,49 +57,9 @@ The repositories on this profile are intended for **real engineering use**: desi
 
 ---
 
-## Selected Repositories
-
-### Wave Mechanics, Transformation & Loads
-
-- [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator) — nonlinear wave calculations in finite depth, including wavelength, free-surface geometry, wave kinematics, and integral invariants.
-- [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation) — computational approximations and engineering solutions for the wave dispersion equation.
-- [**transpose-offshore-to-nearshore**](https://github.com/ricbencar/transpose-offshore-to-nearshore) — offshore-to-nearshore wave transposition at a specified local depth.
-- [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator) — local shallow-foreshore wave-height distribution tools based on the Composite Weibull model.
-- [**wave-forces-on-piles-calculator**](https://github.com/ricbencar/wave-forces-on-piles-calculator) — high-precision calculation of wave-induced loading on vertical cylindrical piles.
-
-### Metocean Data, Trends & Extremes
-
-- [**era5-wave-wind-data**](https://github.com/ricbencar/era5-wave-wind-data) — automated ERA5 wave and wind download workflows using the ECMWF Climate Data Store API.
-- [**wave-wind-statistics**](https://github.com/ricbencar/wave-wind-statistics) — descriptive and extreme-value statistics for ERA5-based metocean time series.
-- [**storm-peaks-analysis**](https://github.com/ricbencar/storm-peaks-analysis) — event-based storm-peak analysis combining wave and tide information.
-- [**wave-height-trends**](https://github.com/ricbencar/wave-height-trends) — statistical analysis of long-term significant-wave-height trends.
-- [**extremes-joint-distribuiton**](https://github.com/ricbencar/extremes-joint-distribuiton) — environmental contour and joint-probability analysis for oceanographic variables.
-
-### Coastal, Hydraulic & Navigation Design
-
-- [**wave-overtopping-calculator**](https://github.com/ricbencar/wave-overtopping-calculator) — neural-network-based prediction of wave overtopping discharges for coastal structures.
-- [**breakwater-cubes-calculator**](https://github.com/ricbencar/breakwater-cubes-calculator) — hydraulic design tools for rubble-mound breakwaters armored with concrete units.
-- [**rock-slope-calculator**](https://github.com/ricbencar/rock-slope-calculator) — design and assessment of rock-armored slopes, revetments, groynes, and breakwaters.
-- [**depth-of-closure-calculator**](https://github.com/ricbencar/depth-of-closure-calculator) — computational tools for depth-of-closure assessment.
-- [**navigation-calculator**](https://github.com/ricbencar/navigation-calculator) — under-keel-clearance and shallow/restricted-water navigation checks.
-- [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions) — ship-dimension estimation utilities based on PIANC datasets.
-
-### Technical Workflow & Utility Tools
-
-- [**pandoc-markdown-converter**](https://github.com/ricbencar/pandoc-markdown-converter) — Markdown to DOCX/PDF conversion with attention to mathematical content and Pandoc/XeLaTeX compatibility.
-- [**ai-document-translator**](https://github.com/ricbencar/ai-document-translator) — AI-assisted translation for engineering and technical documents.
-- [**multilingual-engineering-glossary**](https://github.com/ricbencar/multilingual-engineering-glossary) — multilingual glossary and table generation for technical vocabulary.
-- [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad) — conversion of XYZ point datasets into filtered/interpolated DXF-ready CAD outputs.
-
----
-
 ## Repository Catalogue
 
-The full repository list below is shown directly on the page and can also be refreshed automatically by GitHub Actions.
-
 <!-- REPO-LIST:START -->
-
-## Repositories
 
 Automatically generated from my public GitHub repositories (19 current projects).
 
