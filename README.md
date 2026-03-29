@@ -6,7 +6,7 @@
     <img src="https://img.shields.io/badge/LinkedIn-Ricardo%20Carvalho-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   <a href="mailto:ricbenoliel@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Professional%20Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-Personal%20Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   <a href="https://github.com/ricbencar">
     <img src="https://komarev.com/ghpvc/?username=ricbencar&style=for-the-badge" alt="Profile views" />
