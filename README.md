@@ -1,8 +1,3 @@
-<!--
-Place this file in a public repository named exactly: ricbencar/ricbencar
-GitHub will render it at the top of your profile.
--->
-
 <h1 align="center">Ricardo Benoliel Carvalho</h1>
 <h3 align="center">Port & Coastal Engineer · Maritime Hydraulics · Wave Mechanics · Engineering Computation</h3>
 
@@ -55,29 +50,6 @@ My repositories are designed to be **technical, usable, and engineering-oriented
 
 ---
 
-## Core Expertise
-
-### Engineering Domains
-
-- Port and coastal engineering
-- Maritime hydraulics
-- Coastal protection works
-- Dredging and navigation studies
-- Harbour approach and navigation channel design
-- River and estuarine hydraulics
-- Submarine outfalls and aquatic dispersion studies
-- Technical due diligence, design review, and tender support
-
-### Computational & Data Work
-
-- Numerical modelling of wave agitation and aquatic processes
-- ERA5 / ECMWF data retrieval and processing
-- Time series analysis and descriptive statistics
-- Extreme value analysis (EVA, POT, GEV/GPD)
-- Environmental contour analysis
-- Data processing, automation, and engineering scripting
-- GIS-based spatial analysis and terrain / bathymetry workflows
-
 ### Tools & Technologies
 
 <p>
@@ -97,13 +69,9 @@ My repositories are designed to be **technical, usable, and engineering-oriented
 
 ---
 
-## Repositories
+## All my Repositories
 
 <!-- REPO-LIST:START -->
-
-## Repositories
-
-Automatically generated from my public GitHub repositories (21 current projects).
 
 ### Other Projects
 
