@@ -28,6 +28,12 @@ I am a civil engineer working in **port and coastal engineering, maritime hydrau
 
 The repositories on this profile are intended for **real engineering use**: design support, hydraulic verification, numerical analysis, preprocessing and postprocessing of metocean data, and reproducible technical documentation.
 
+The work published here covers a broad technical range, including **wave dispersion and nonlinear wave solvers**, **ERA5-based wave and wind data workflows**, **metocean statistics**, **storm peak and trend analysis**, **extreme value assessment**, **environmental contours**, and **joint probability modelling**. It also includes tools for **offshore-to-nearshore wave transposition**, **shallow-foreshore wave transformation**, and **wave overtopping prediction** for coastal and maritime applications.
+
+In addition, this profile includes computational tools for **hydraulic design of breakwaters, rock slopes, artificial armor units, and depth of closure**, as well as **navigation and under-keel-clearance studies** and **PIANC-based ship-dimension assessment**. Some repositories are focused on **wave loading and fluid-structure interaction**, while others support engineering workflows through **technical document conversion, translation, glossary generation, data export, and other productivity utilities** intended to make technical work more consistent, traceable, and efficient.
+
+Although all repositories are released under the **MIT License**, they are provided **as is**, without any warranty of accuracy, completeness, fitness for a particular purpose, or suitability for project-critical decisions. They should therefore be used **at the user’s own risk**, with appropriate engineering judgment, independent verification, and technical review before application in professional studies, design, or operational contexts.
+
 ---
 
 ## Core Technical Areas
@@ -42,18 +48,22 @@ The repositories on this profile are intended for **real engineering use**: desi
 
 ---
 
-## What You Will Find Here
+## Tools & Technologies
 
-- wave dispersion, nonlinear wave theory, and wave kinematics solvers
-- ERA5-based wave and wind data download, extraction, and processing workflows
-- metocean statistics, storm peak analysis, and long-term wave trend assessment
-- extreme value analysis, environmental contours, and joint probability modelling
-- offshore-to-nearshore wave transposition and shallow-foreshore wave transformation tools
-- wave overtopping prediction and coastal hydraulic response analysis
-- hydraulic design tools for breakwaters, rock slopes, artificial armor units, and depth of closure
-- navigation, under-keel-clearance, and PIANC-based ship dimension assessment utilities
-- wave loading and fluid-structure interaction tools for piles and marine structures
-- engineering productivity tools for technical document conversion, translation, glossary generation, and data export
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/Fortran-734F96?style=flat-square&logo=fortran&logoColor=white" alt="Fortran" />
+  <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R" />
+  <img src="https://img.shields.io/badge/VBA-217346?style=flat-square&logo=microsoft-excel&logoColor=white" alt="VBA" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux" />
+  <img src="https://img.shields.io/badge/QGIS-589632?style=flat-square&logo=qgis&logoColor=white" alt="QGIS" />
+  <img src="https://img.shields.io/badge/ECMWF%20%2F%20ERA5-003366?style=flat-square" alt="ECMWF ERA5" />
+  <img src="https://img.shields.io/badge/GRIB%20%2F%20CDO-475569?style=flat-square" alt="GRIB and CDO" />
+  <img src="https://img.shields.io/badge/Coastal%20Engineering-0F766E?style=flat-square" alt="Coastal Engineering" />
+  <img src="https://img.shields.io/badge/Hydraulics-1D4ED8?style=flat-square" alt="Hydraulics" />
+  <img src="https://img.shields.io/badge/Extreme%20Value%20Analysis-7C3AED?style=flat-square" alt="Extreme Value Analysis" />
+</p>
 
 ---
 
@@ -143,25 +153,6 @@ Utilities for technical documentation, translation, glossary generation, and eng
   This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
 
 <!-- REPO-LIST:END -->
-
----
-
-## Tools & Technologies
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/Fortran-734F96?style=flat-square&logo=fortran&logoColor=white" alt="Fortran" />
-  <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R" />
-  <img src="https://img.shields.io/badge/VBA-217346?style=flat-square&logo=microsoft-excel&logoColor=white" alt="VBA" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux" />
-  <img src="https://img.shields.io/badge/QGIS-589632?style=flat-square&logo=qgis&logoColor=white" alt="QGIS" />
-  <img src="https://img.shields.io/badge/ECMWF%20%2F%20ERA5-003366?style=flat-square" alt="ECMWF ERA5" />
-  <img src="https://img.shields.io/badge/GRIB%20%2F%20CDO-475569?style=flat-square" alt="GRIB and CDO" />
-  <img src="https://img.shields.io/badge/Coastal%20Engineering-0F766E?style=flat-square" alt="Coastal Engineering" />
-  <img src="https://img.shields.io/badge/Hydraulics-1D4ED8?style=flat-square" alt="Hydraulics" />
-  <img src="https://img.shields.io/badge/Extreme%20Value%20Analysis-7C3AED?style=flat-square" alt="Extreme Value Analysis" />
-</p>
 
 ---
 
