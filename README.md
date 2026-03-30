@@ -24,9 +24,7 @@
 
 ## Profile
 
-I am a 55 years old, civil engineer working in **port and coastal engineering, maritime hydraulics, wave mechanics, and technical computation**. My GitHub profile is centered on **practical engineering tools** for metocean analysis, nonlinear wave calculation, hydraulic design, navigation studies, and technical workflow automation.
-
-Here is a more polished and better-structured version:
+I'm a civil engineer working in **port and coastal engineering, maritime hydraulics, wave mechanics, and technical computation**. My GitHub profile is centered on **practical engineering tools** for metocean analysis, nonlinear wave calculation, hydraulic design, navigation studies, and technical workflow automation.
 
 The work published here spans a **broad and technical range of engineering topics**. It includes **wave dispersion and nonlinear wave solvers**, **ERA5-based workflows for wave and wind data**, **metocean statistics**, **storm peak and trend analysis**, **extreme value assessment**, **environmental contour generation**, and **joint probability modelling**. It also covers tools for **offshore-to-nearshore wave transposition**, **wave transformation over shallow foreshores**, and **wave overtopping prediction** for a range of **coastal and maritime engineering applications**.
 
