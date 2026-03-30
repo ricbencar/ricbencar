@@ -66,12 +66,8 @@ All repositories are released under the **MIT License** and they are provided **
 </p>
 
 ---
-
-## Repository Catalogue
-
-<!-- REPO-LIST:START -->
-
 ## Repositories
+<!-- REPO-LIST:START -->
 
 Automatically generated from my public GitHub repositories (21 current projects).
 
