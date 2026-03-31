@@ -54,6 +54,8 @@ CATEGORY_RULES = {
         "wind-waves",
         "wave-transformation",
         "wave transformation",
+        "wind-waves-generation",
+        "wind waves generation",
     ],
     "Metocean Data, Extremes & Statistical Analysis": [
         "metocean",
