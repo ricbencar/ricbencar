@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+import urllib.error
 import urllib.request
 from collections import defaultdict
 from datetime import datetime
@@ -121,27 +122,36 @@ def github_api_get(url: str, token: Optional[str] = None) -> Any:
     headers = {
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "{0}-profile-readme-generator".format(USERNAME),
+        "User-Agent": f"{USERNAME}-profile-readme-generator",
     }
     if token:
-        headers["Authorization"] = "Bearer {0}".format(token)
+        headers["Authorization"] = f"Bearer {token}"
 
     request = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(request) as response:
-        return json.loads(response.read().decode("utf-8"))
+
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"GitHub API HTTP {exc.code}: {body}") from exc
+    except urllib.error.URLError as exc:
+        raise RuntimeError(f"GitHub API request failed: {exc}") from exc
 
 
 def fetch_repositories(username: str, token: Optional[str] = None) -> List[Dict[str, Any]]:
-    repos = []
+    repos: List[Dict[str, Any]] = []
     page = 1
 
     while True:
         url = (
-            "https://api.github.com/users/{0}/repos"
-            "?type=owner&sort=updated&per_page=100&page={1}"
-        ).format(username, page)
-
+            f"https://api.github.com/users/{username}/repos"
+            f"?type=owner&sort=updated&per_page=100&page={page}"
+        )
         batch = github_api_get(url, token)
+
+        if not isinstance(batch, list):
+            raise RuntimeError(f"Unexpected GitHub API response: {batch}")
         if not batch:
             break
 
@@ -149,7 +159,6 @@ def fetch_repositories(username: str, token: Optional[str] = None) -> List[Dict[
 
         if len(batch) < 100:
             break
-
         page += 1
 
     return [
@@ -175,11 +184,15 @@ def normalize_text(parts: Iterable[str]) -> str:
 
 
 def pick_category(repo: Dict[str, Any]) -> str:
+    topics = repo.get("topics") or []
+    if not isinstance(topics, list):
+        topics = []
+
     haystack = normalize_text(
         [
             repo.get("name", "").replace("-", " "),
             repo.get("description", "") or "",
-            " ".join(repo.get("topics", []) or []),
+            " ".join(str(topic) for topic in topics),
             repo.get("homepage", "") or "",
         ]
     )
@@ -207,17 +220,17 @@ def format_date(iso_value: Optional[str]) -> str:
 
 
 def repo_meta_line(repo: Dict[str, Any]) -> str:
-    parts = []
+    parts: List[str] = []
     if repo.get("language"):
-        parts.append("Language: `{0}`".format(repo["language"]))
-    parts.append("Updated: `{0}`".format(format_date(repo.get("updated_at"))))
+        parts.append(f"Language: `{repo['language']}`")
+    parts.append(f"Updated: `{format_date(repo.get('updated_at'))}`")
     if repo.get("stargazers_count", 0):
-        parts.append("Stars: `{0}`".format(repo["stargazers_count"]))
+        parts.append(f"Stars: `{repo['stargazers_count']}`")
     return " · ".join(parts)
 
 
 def build_section(repos: List[Dict[str, Any]]) -> str:
-    grouped = defaultdict(list)
+    grouped: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
     for repo in repos:
         grouped[pick_category(repo)].append(repo)
 
@@ -230,11 +243,9 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
     if grouped.get(FALLBACK_CATEGORY):
         ordered_categories.append(FALLBACK_CATEGORY)
 
-    lines = []
-    lines.append("## Repositories")
-    lines.append("")
+    lines: List[str] = []
     lines.append(
-        "Automatically generated from my public GitHub repositories ({0} current projects).".format(len(repos))
+        f"Automatically generated from my public GitHub repositories ({len(repos)} current projects)."
     )
     lines.append("")
 
@@ -244,11 +255,11 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
             continue
 
         items.sort(
-            key=lambda r: (r.get("updated_at", ""), r.get("stargazers_count", 0)),
+            key=lambda repo: (repo.get("updated_at", ""), repo.get("stargazers_count", 0)),
             reverse=True,
         )
 
-        lines.append("### {0}".format(category))
+        lines.append(f"### {category}")
         lines.append("")
 
         intro = SECTION_INTROS.get(category)
@@ -257,9 +268,10 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
             lines.append("")
 
         for repo in items:
-            lines.append("- [**{0}**]({1})".format(repo["name"], repo["html_url"]))
-            lines.append("  {0}".format(clean_description(repo.get("description"))))
-            lines.append("  {0}".format(repo_meta_line(repo)))
+            html_url = repo.get("html_url") or f"https://github.com/{USERNAME}/{repo.get('name', '')}"
+            lines.append(f"- [**{repo['name']}**]({html_url})")
+            lines.append(f"  {clean_description(repo.get('description'))}")
+            lines.append(f"  {repo_meta_line(repo)}")
             lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
@@ -286,10 +298,10 @@ def main() -> int:
     readme = readme_path.read_text(encoding="utf-8")
     updated = replace_between_markers(readme, section)
 
-    with readme_path.open("w", encoding="utf-8", newline="\n") as f:
-        f.write(updated)
+    with readme_path.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(updated)
 
-    print("Updated {0} with {1} repositories.".format(readme_path, len(repos)))
+    print(f"Updated {readme_path} with {len(repos)} repositories.")
     return 0
 
 
@@ -297,5 +309,5 @@ if __name__ == "__main__":
     try:
         raise SystemExit(main())
     except Exception as exc:
-        print("ERROR: {0}".format(exc), file=sys.stderr)
+        print(f"ERROR: {exc}", file=sys.stderr)
         raise SystemExit(1)
