@@ -1,6 +1,6 @@
 name: Update repository list
 
-on:
+"on":
   workflow_dispatch:
   schedule:
     - cron: '0 6 * * *'
@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,7 +33,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet README.md; then
+          if git diff --quiet -- README.md; then
             echo "No changes to commit."
             exit 0
           fi
