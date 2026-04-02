@@ -151,6 +151,10 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
 
 Utilities for technical documentation, translation, glossary generation, and engineering data conversion.
 
+- [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
+  This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
+  Language: `C++` · Updated: `2026-04-01`
+
 - [**pandoc-markdown-converter**](https://github.com/ricbencar/pandoc-markdown-converter)
   A Python application that converts Markdown documents into DOCX and PDF using Pandoc, with attention to mathematical content, LaTeX compatibility, template discovery.
   Language: `Python` · Updated: `2026-03-24`
@@ -162,10 +166,6 @@ Utilities for technical documentation, translation, glossary generation, and eng
 - [**multilingual-engineering-glossary**](https://github.com/ricbencar/multilingual-engineering-glossary)
   This tool generates a multilingual engineering glossary and table across up to 30 global languages.
   Language: `Python` · Updated: `2026-01-09`
-
-- [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
-  This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
-  Language: `C++` · Updated: `2025-12-08`
 
 ### Other Projects
 
