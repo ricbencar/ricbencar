@@ -153,7 +153,7 @@ Utilities for technical documentation, translation, glossary generation, and eng
 
 - [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
   This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
-  Language: `C++` · Updated: `2026-04-01`
+  Language: `C++` · Updated: `2026-04-02`
 
 - [**pandoc-markdown-converter**](https://github.com/ricbencar/pandoc-markdown-converter)
   A Python application that converts Markdown documents into DOCX and PDF using Pandoc, with attention to mathematical content, LaTeX compatibility, template discovery.
