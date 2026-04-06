@@ -2,12 +2,13 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 import urllib.request
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional
+from typing import Any, Dict, Iterable, List, Optional, Set
 
 USERNAME = os.environ.get("GITHUB_USERNAME", "ricbencar")
 
@@ -18,7 +19,6 @@ FALLBACK_CATEGORY = "Other Projects"
 CATEGORY_RULES = {
     "Coastal & Maritime Hydraulic Design": [
         "breakwater",
-        "rock-slope",
         "rock slope",
         "coastal protection",
         "revetment",
@@ -27,48 +27,47 @@ CATEGORY_RULES = {
         "under keel",
         "ukc",
         "pianc",
-        "ship-dimensions",
         "ship dimensions",
-        "depth-of-closure",
         "depth of closure",
         "overtopping",
-        "maritime",
-        "coastal-hydraulics",
-        "coastal-maritime-hydraulic-design",
+        "maritime hydraulics",
+        "coastal hydraulics",
+        "coastal maritime hydraulic design",
     ],
     "Wave Mechanics, Transformation & Coastal Processes": [
         "wave mechanics",
-        "wave-mechanics",
-        "wave-dispersion",
-        "dispersion",
+        "wave dispersion",
+        "dispersion equation",
         "nonlinear wave",
         "fenton",
         "nearshore",
-        "offshore-to-nearshore",
         "offshore to nearshore",
-        "shallow-water-waves",
         "shallow water waves",
-        "wave-forces",
         "wave forces",
-        "wind-waves",
+        "wave loading",
         "wind waves",
-        "wind-generated wave",
+        "wind wave",
         "wind generated wave",
+        "wave generation",
+        "wind wave generation",
         "smb",
-        "sverdrup-munk-bretschneider",
+        "sverdrup",
+        "bretschneider",
         "sverdrup munk bretschneider",
-        "wave-transformation",
         "wave transformation",
+        "shoaling",
+        "refraction",
+        "wave kinematics",
+        "coastal processes",
     ],
     "Metocean Data, Extremes & Statistical Analysis": [
         "metocean",
         "era5",
         "climate data",
-        "wave-wind",
         "wave wind",
         "storm",
         "extreme",
-        "extreme-value-analysis",
+        "extreme value",
         "environmental contour",
         "joint distribution",
         "joint probability",
@@ -123,6 +122,7 @@ def find_readme_path() -> Path:
     raise RuntimeError("README.md not found.")
 
 
+
 def github_api_get(url: str, token: Optional[str] = None) -> Any:
     headers = {
         "Accept": "application/vnd.github+json",
@@ -135,6 +135,7 @@ def github_api_get(url: str, token: Optional[str] = None) -> Any:
     request = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(request) as response:
         return json.loads(response.read().decode("utf-8"))
+
 
 
 def fetch_repositories(username: str, token: Optional[str] = None) -> List[Dict[str, Any]]:
@@ -167,6 +168,7 @@ def fetch_repositories(username: str, token: Optional[str] = None) -> List[Dict[
     ]
 
 
+
 def clean_description(desc: Optional[str]) -> str:
     if not desc:
         return "Repository description to be added."
@@ -176,30 +178,138 @@ def clean_description(desc: Optional[str]) -> str:
     return desc
 
 
+
 def normalize_text(parts: Iterable[str]) -> str:
-    return " ".join(part.strip().lower() for part in parts if part).strip()
+    """
+    Normalize text for category matching.
+
+    - lowercases
+    - replaces hyphens, underscores, slashes and punctuation with spaces
+    - collapses repeated whitespace
+    """
+    text = " ".join(part for part in parts if part)
+    text = text.lower()
+    text = re.sub(r"[_\-/]+", " ", text)
+    text = re.sub(r"[^a-z0-9\s]+", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+
+def normalize_phrase(text: str) -> str:
+    return normalize_text([text])
+
+
+
+def tokenize(text: str) -> Set[str]:
+    return set(normalize_text([text]).split())
+
+
+
+def phrase_in_text(phrase: str, text: str) -> bool:
+    """
+    Whole-phrase match over normalized text.
+    """
+    p = normalize_phrase(phrase)
+    if not p:
+        return False
+    padded_text = f" {text} "
+    padded_phrase = f" {p} "
+    return padded_phrase in padded_text
+
+
+
+def score_keyword_against_fields(
+    keyword: str,
+    *,
+    name_text: str,
+    desc_text: str,
+    topics_text: str,
+    homepage_text: str,
+    name_tokens: Set[str],
+    desc_tokens: Set[str],
+    topics_tokens: Set[str],
+    homepage_tokens: Set[str],
+) -> int:
+    """
+    Weighted scoring:
+    - topics are the strongest semantic signal
+    - repository name is next
+    - description is useful but weaker
+    - homepage is weakest
+    - token-set support helps when phrase order varies
+    """
+    score = 0
+    norm_keyword = normalize_phrase(keyword)
+    if not norm_keyword:
+        return 0
+
+    kw_tokens = set(norm_keyword.split())
+
+    if phrase_in_text(keyword, topics_text):
+        score += 8
+    elif kw_tokens and kw_tokens.issubset(topics_tokens):
+        score += 6
+
+    if phrase_in_text(keyword, name_text):
+        score += 6
+    elif kw_tokens and kw_tokens.issubset(name_tokens):
+        score += 4
+
+    if phrase_in_text(keyword, desc_text):
+        score += 4
+    elif kw_tokens and kw_tokens.issubset(desc_tokens):
+        score += 2
+
+    if phrase_in_text(keyword, homepage_text):
+        score += 2
+    elif kw_tokens and kw_tokens.issubset(homepage_tokens):
+        score += 1
+
+    return score
+
 
 
 def pick_category(repo: Dict[str, Any]) -> str:
-    haystack = normalize_text(
-        [
-            repo.get("name", "").replace("-", " "),
-            repo.get("description", "") or "",
-            " ".join(repo.get("topics", []) or []),
-            repo.get("homepage", "") or "",
-        ]
-    )
+    raw_name = repo.get("name", "") or ""
+    raw_desc = repo.get("description", "") or ""
+    raw_topics = " ".join(repo.get("topics", []) or [])
+    raw_homepage = repo.get("homepage", "") or ""
+
+    name_text = normalize_text([raw_name])
+    desc_text = normalize_text([raw_desc])
+    topics_text = normalize_text([raw_topics])
+    homepage_text = normalize_text([raw_homepage])
+
+    name_tokens = tokenize(raw_name)
+    desc_tokens = tokenize(raw_desc)
+    topics_tokens = tokenize(raw_topics)
+    homepage_tokens = tokenize(raw_homepage)
 
     best_category = FALLBACK_CATEGORY
     best_score = 0
 
     for category, keywords in CATEGORY_RULES.items():
-        score = sum(1 for keyword in keywords if keyword.lower() in haystack)
-        if score > best_score:
-            best_score = score
+        category_score = 0
+        for keyword in keywords:
+            category_score += score_keyword_against_fields(
+                keyword,
+                name_text=name_text,
+                desc_text=desc_text,
+                topics_text=topics_text,
+                homepage_text=homepage_text,
+                name_tokens=name_tokens,
+                desc_tokens=desc_tokens,
+                topics_tokens=topics_tokens,
+                homepage_tokens=homepage_tokens,
+            )
+
+        if category_score > best_score:
+            best_score = category_score
             best_category = category
 
     return best_category
+
 
 
 def format_date(iso_value: Optional[str]) -> str:
@@ -212,6 +322,7 @@ def format_date(iso_value: Optional[str]) -> str:
         return iso_value[:10]
 
 
+
 def repo_meta_line(repo: Dict[str, Any]) -> str:
     parts: List[str] = []
     if repo.get("language"):
@@ -220,6 +331,7 @@ def repo_meta_line(repo: Dict[str, Any]) -> str:
     if repo.get("stargazers_count", 0):
         parts.append(f"Stars: `{repo['stargazers_count']}`")
     return " · ".join(parts)
+
 
 
 def build_section(repos: List[Dict[str, Any]]) -> str:
@@ -267,6 +379,7 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+
 def replace_between_markers(readme_text: str, new_section: str) -> str:
     start = readme_text.find(START_MARKER)
     end = readme_text.find(END_MARKER)
@@ -276,6 +389,7 @@ def replace_between_markers(readme_text: str, new_section: str) -> str:
     before = readme_text[: start + len(START_MARKER)]
     after = readme_text[end:]
     return before + "\n\n" + new_section + "\n" + after
+
 
 
 def main() -> int:
