@@ -105,8 +105,14 @@ SECTION_INTROS = {
     ),
 }
 
+HTTP_TIMEOUT_SECONDS = 30
+
 
 def find_readme_path() -> Path:
+    """
+    Locate README.md whether this script is stored at the repository root
+    or under .github/scripts/.
+    """
     workspace = os.environ.get("GITHUB_WORKSPACE")
     if workspace:
         candidate = Path(workspace) / "README.md"
@@ -122,7 +128,6 @@ def find_readme_path() -> Path:
     raise RuntimeError("README.md not found.")
 
 
-
 def github_api_get(url: str, token: Optional[str] = None) -> Any:
     headers = {
         "Accept": "application/vnd.github+json",
@@ -133,9 +138,8 @@ def github_api_get(url: str, token: Optional[str] = None) -> Any:
         headers["Authorization"] = f"Bearer {token}"
 
     request = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(request) as response:
+    with urllib.request.urlopen(request, timeout=HTTP_TIMEOUT_SECONDS) as response:
         return json.loads(response.read().decode("utf-8"))
-
 
 
 def fetch_repositories(username: str, token: Optional[str] = None) -> List[Dict[str, Any]]:
@@ -168,7 +172,6 @@ def fetch_repositories(username: str, token: Optional[str] = None) -> List[Dict[
     ]
 
 
-
 def clean_description(desc: Optional[str]) -> str:
     if not desc:
         return "Repository description to be added."
@@ -178,14 +181,14 @@ def clean_description(desc: Optional[str]) -> str:
     return desc
 
 
-
 def normalize_text(parts: Iterable[str]) -> str:
     """
     Normalize text for category matching.
 
-    - lowercases
-    - replaces hyphens, underscores, slashes and punctuation with spaces
-    - collapses repeated whitespace
+    - lowercase
+    - replace hyphens, underscores, and slashes with spaces
+    - strip other punctuation
+    - collapse repeated whitespace
     """
     text = " ".join(part for part in parts if part)
     text = text.lower()
@@ -195,28 +198,22 @@ def normalize_text(parts: Iterable[str]) -> str:
     return text
 
 
-
 def normalize_phrase(text: str) -> str:
     return normalize_text([text])
-
 
 
 def tokenize(text: str) -> Set[str]:
     return set(normalize_text([text]).split())
 
 
-
 def phrase_in_text(phrase: str, text: str) -> bool:
     """
     Whole-phrase match over normalized text.
     """
-    p = normalize_phrase(phrase)
-    if not p:
+    normalized_phrase = normalize_phrase(phrase)
+    if not normalized_phrase:
         return False
-    padded_text = f" {text} "
-    padded_phrase = f" {p} "
-    return padded_phrase in padded_text
-
+    return f" {normalized_phrase} " in f" {text} "
 
 
 def score_keyword_against_fields(
@@ -240,34 +237,33 @@ def score_keyword_against_fields(
     - token-set support helps when phrase order varies
     """
     score = 0
-    norm_keyword = normalize_phrase(keyword)
-    if not norm_keyword:
+    normalized_keyword = normalize_phrase(keyword)
+    if not normalized_keyword:
         return 0
 
-    kw_tokens = set(norm_keyword.split())
+    keyword_tokens = set(normalized_keyword.split())
 
     if phrase_in_text(keyword, topics_text):
         score += 8
-    elif kw_tokens and kw_tokens.issubset(topics_tokens):
+    elif keyword_tokens and keyword_tokens.issubset(topics_tokens):
         score += 6
 
     if phrase_in_text(keyword, name_text):
         score += 6
-    elif kw_tokens and kw_tokens.issubset(name_tokens):
+    elif keyword_tokens and keyword_tokens.issubset(name_tokens):
         score += 4
 
     if phrase_in_text(keyword, desc_text):
         score += 4
-    elif kw_tokens and kw_tokens.issubset(desc_tokens):
+    elif keyword_tokens and keyword_tokens.issubset(desc_tokens):
         score += 2
 
     if phrase_in_text(keyword, homepage_text):
         score += 2
-    elif kw_tokens and kw_tokens.issubset(homepage_tokens):
+    elif keyword_tokens and keyword_tokens.issubset(homepage_tokens):
         score += 1
 
     return score
-
 
 
 def pick_category(repo: Dict[str, Any]) -> str:
@@ -311,7 +307,6 @@ def pick_category(repo: Dict[str, Any]) -> str:
     return best_category
 
 
-
 def format_date(iso_value: Optional[str]) -> str:
     if not iso_value:
         return "unknown"
@@ -322,7 +317,6 @@ def format_date(iso_value: Optional[str]) -> str:
         return iso_value[:10]
 
 
-
 def repo_meta_line(repo: Dict[str, Any]) -> str:
     parts: List[str] = []
     if repo.get("language"):
@@ -331,7 +325,6 @@ def repo_meta_line(repo: Dict[str, Any]) -> str:
     if repo.get("stargazers_count", 0):
         parts.append(f"Stars: `{repo['stargazers_count']}`")
     return " · ".join(parts)
-
 
 
 def build_section(repos: List[Dict[str, Any]]) -> str:
@@ -349,7 +342,9 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
         ordered_categories.append(FALLBACK_CATEGORY)
 
     lines: List[str] = []
-    lines.append(f"Automatically generated from my public GitHub repositories ({len(repos)} current projects).")
+    lines.append(
+        f"Automatically generated from my public GitHub repositories ({len(repos)} current projects)."
+    )
     lines.append("")
 
     for category in ordered_categories:
@@ -358,7 +353,7 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
             continue
 
         items.sort(
-            key=lambda r: (r.get("updated_at", ""), r.get("stargazers_count", 0)),
+            key=lambda repo: (repo.get("updated_at", ""), repo.get("stargazers_count", 0)),
             reverse=True,
         )
 
@@ -379,7 +374,6 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-
 def replace_between_markers(readme_text: str, new_section: str) -> str:
     start = readme_text.find(START_MARKER)
     end = readme_text.find(END_MARKER)
@@ -389,7 +383,6 @@ def replace_between_markers(readme_text: str, new_section: str) -> str:
     before = readme_text[: start + len(START_MARKER)]
     after = readme_text[end:]
     return before + "\n\n" + new_section + "\n" + after
-
 
 
 def main() -> int:
@@ -402,8 +395,8 @@ def main() -> int:
     readme = readme_path.read_text(encoding="utf-8")
     updated = replace_between_markers(readme, section)
 
-    with readme_path.open("w", encoding="utf-8", newline="\n") as f:
-        f.write(updated)
+    with readme_path.open("w", encoding="utf-8", newline="\n") as file_handle:
+        file_handle.write(updated)
 
     print(f"Updated {readme_path} with {len(repos)} repositories.")
     return 0

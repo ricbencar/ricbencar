@@ -123,6 +123,10 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
   This program reads offshore wave data from a CSV file and computes nearshore wave parameters at a specified depth.
   Language: `C++` · Updated: `2025-12-08` · Stars: `1`
 
+- [**wind-waves-generation**](https://github.com/ricbencar/wind-waves-generation)
+  A collection of Python scripts for predicting wind-generated wave characteristics using the Sverdrup-Munk-Bretschneider (SMB) method.
+  Language: `Python` · Updated: `2026-01-19`
+
 ### Metocean Data, Extremes & Statistical Analysis
 
 ERA5 workflows, wave and wind statistics, storm characterization, long-term trends, and probabilistic sea-state analysis.
@@ -166,13 +170,6 @@ Utilities for technical documentation, translation, glossary generation, and eng
 - [**multilingual-engineering-glossary**](https://github.com/ricbencar/multilingual-engineering-glossary)
   This tool generates a multilingual engineering glossary and table across up to 30 global languages.
   Language: `Python` · Updated: `2026-01-09`
-
-### Other Projects
-
-- [**wind-waves-generation**](https://github.com/ricbencar/wind-waves-generation)
-  A collection of Python scripts for predicting wind-generated wave characteristics using the Sverdrup-Munk-Bretschneider (SMB) method.
-  Language: `Python` · Updated: `2026-01-19`
-
 <!-- REPO-LIST:END -->
 
 ---

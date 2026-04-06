@@ -24,35 +24,62 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
+      - name: Sync with latest main
+        shell: bash
+        run: |
+          set -e
+          git fetch origin main
+          git checkout main
+          git pull --rebase origin main
+
+      - name: Locate generator script
+        id: locate_script
+        shell: bash
+        run: |
+          set -e
+          if [ -f ".github/scripts/update_repo_list.py" ]; then
+            echo "path=.github/scripts/update_repo_list.py" >> "$GITHUB_OUTPUT"
+          elif [ -f "update_repo_list.py" ]; then
+            echo "path=update_repo_list.py" >> "$GITHUB_OUTPUT"
+          else
+            echo "Could not find update_repo_list.py in .github/scripts/ or repository root." >&2
+            exit 1
+          fi
+
       - name: Show repository tree
+        shell: bash
         run: |
           pwd
+          git status --short --branch
           ls -la
           ls -la .github || true
           ls -la .github/scripts || true
           ls -la .github/workflows || true
+          echo "Generator script: ${{ steps.locate_script.outputs.path }}"
 
       - name: Run generator
         env:
           GITHUB_USERNAME: ricbencar
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python .github/scripts/update_repo_list.py
+          python "${{ steps.locate_script.outputs.path }}"
 
-      - name: Commit and push updated README
+      - name: Commit updated README
+        shell: bash
         run: |
           set -e
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet README.md; then
+          if git diff --quiet -- README.md; then
             echo "No changes to commit."
             exit 0
           fi
@@ -60,6 +87,27 @@ jobs:
           git add README.md
           git commit -m "Update repository list"
 
-          git fetch origin main
-          git pull --rebase origin main
-          git push origin HEAD:main
+      - name: Push with rebase retry
+        shell: bash
+        run: |
+          set -e
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "Push succeeded on attempt ${attempt}."
+              exit 0
+            fi
+
+            echo "Push failed on attempt ${attempt}; syncing and retrying..."
+            git fetch origin main
+            git pull --rebase origin main
+
+            python "${{ steps.locate_script.outputs.path }}"
+            if ! git diff --quiet -- README.md; then
+              git add README.md
+              git commit --amend --no-edit
+            fi
+          done
+
+          echo "Push failed after 3 attempts." >&2
+          exit 1
