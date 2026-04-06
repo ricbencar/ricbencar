@@ -11,6 +11,10 @@ permissions:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
+concurrency:
+  group: update-repo-list-main
+  cancel-in-progress: false
+
 jobs:
   update-repo-list:
     runs-on: ubuntu-latest
@@ -18,6 +22,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -50,4 +56,10 @@ jobs:
 
           git add README.md
           git commit -m "Update repository list"
-          git push
+
+          # The remote branch may have advanced after checkout or while this job
+          # was running. Rebase local changes on top of the latest remote main
+          # before pushing, so the push remains fast-forward.
+          git fetch origin main
+          git pull --rebase origin main
+          git push origin HEAD:main
