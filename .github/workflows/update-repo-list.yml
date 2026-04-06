@@ -36,6 +36,7 @@ jobs:
           ls -la
           ls -la .github || true
           ls -la .github/scripts || true
+          ls -la .github/workflows || true
 
       - name: Run generator
         env:
@@ -44,8 +45,10 @@ jobs:
         run: |
           python .github/scripts/update_repo_list.py
 
-      - name: Commit updated README
+      - name: Commit and push updated README
         run: |
+          set -e
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -57,9 +60,6 @@ jobs:
           git add README.md
           git commit -m "Update repository list"
 
-          # The remote branch may have advanced after checkout or while this job
-          # was running. Rebase local changes on top of the latest remote main
-          # before pushing, so the push remains fast-forward.
           git fetch origin main
           git pull --rebase origin main
           git push origin HEAD:main
