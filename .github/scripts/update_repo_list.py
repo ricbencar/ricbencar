@@ -15,6 +15,7 @@ USERNAME = os.environ.get("GITHUB_USERNAME", "ricbencar")
 START_MARKER = "<!-- REPO-LIST:START -->"
 END_MARKER = "<!-- REPO-LIST:END -->"
 FALLBACK_CATEGORY = "Other Projects"
+HTTP_TIMEOUT_SECONDS = 30
 
 CATEGORY_RULES = {
     "Coastal & Maritime Hydraulic Design": [
@@ -105,8 +106,6 @@ SECTION_INTROS = {
     ),
 }
 
-HTTP_TIMEOUT_SECONDS = 30
-
 
 def find_readme_path() -> Path:
     """
@@ -170,6 +169,44 @@ def fetch_repositories(username: str, token: Optional[str] = None) -> List[Dict[
         and not repo.get("archived", False)
         and repo.get("name", "").lower() != username.lower()
     ]
+
+
+def fetch_repo_languages(repo: Dict[str, Any], token: Optional[str] = None) -> List[str]:
+    languages_url = repo.get("languages_url")
+    if not languages_url:
+        primary_language = repo.get("language")
+        return [primary_language] if primary_language else []
+
+    try:
+        payload = github_api_get(languages_url, token)
+    except Exception:
+        primary_language = repo.get("language")
+        return [primary_language] if primary_language else []
+
+    if not isinstance(payload, dict):
+        primary_language = repo.get("language")
+        return [primary_language] if primary_language else []
+
+    language_items = sorted(
+        ((language, bytes_of_code) for language, bytes_of_code in payload.items()),
+        key=lambda item: (-int(item[1]), item[0].lower()),
+    )
+    languages = [language for language, _ in language_items if language]
+
+    if languages:
+        return languages
+
+    primary_language = repo.get("language")
+    return [primary_language] if primary_language else []
+
+
+def enrich_repositories(repos: List[Dict[str, Any]], token: Optional[str] = None) -> List[Dict[str, Any]]:
+    enriched: List[Dict[str, Any]] = []
+    for repo in repos:
+        repo_copy = dict(repo)
+        repo_copy["display_languages"] = fetch_repo_languages(repo_copy, token)
+        enriched.append(repo_copy)
+    return enriched
 
 
 def clean_description(desc: Optional[str]) -> str:
@@ -317,11 +354,19 @@ def format_date(iso_value: Optional[str]) -> str:
         return iso_value[:10]
 
 
+def format_languages(repo: Dict[str, Any]) -> str:
+    languages = [language for language in repo.get("display_languages", []) if language]
+    if not languages and repo.get("language"):
+        languages = [repo["language"]]
+    if not languages:
+        return "unknown"
+    return ", ".join(languages)
+
+
 def repo_meta_line(repo: Dict[str, Any]) -> str:
     parts: List[str] = []
-    if repo.get("language"):
-        parts.append(f"Language: `{repo['language']}`")
-    parts.append(f"Updated: `{format_date(repo.get('updated_at'))}`")
+    parts.append(f"Languages: `{format_languages(repo)}`")
+    parts.append(f"Updated: `{format_date(repo.get('pushed_at') or repo.get('updated_at'))}`")
     if repo.get("stargazers_count", 0):
         parts.append(f"Stars: `{repo['stargazers_count']}`")
     return " · ".join(parts)
@@ -342,10 +387,6 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
         ordered_categories.append(FALLBACK_CATEGORY)
 
     lines: List[str] = []
-    lines.append(
-        f"Automatically generated from my public GitHub repositories ({len(repos)} current projects)."
-    )
-    lines.append("")
 
     for category in ordered_categories:
         items = grouped.get(category, [])
@@ -353,7 +394,10 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
             continue
 
         items.sort(
-            key=lambda repo: (repo.get("updated_at", ""), repo.get("stargazers_count", 0)),
+            key=lambda repo: (
+                repo.get("pushed_at", "") or repo.get("updated_at", ""),
+                repo.get("stargazers_count", 0),
+            ),
             reverse=True,
         )
 
@@ -371,7 +415,9 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
             lines.append(f"  {repo_meta_line(repo)}")
             lines.append("")
 
-    return "\n".join(lines).rstrip() + "\n"
+    return "
+".join(lines).rstrip() + "
+"
 
 
 def replace_between_markers(readme_text: str, new_section: str) -> str:
@@ -382,7 +428,28 @@ def replace_between_markers(readme_text: str, new_section: str) -> str:
 
     before = readme_text[: start + len(START_MARKER)]
     after = readme_text[end:]
-    return before + "\n\n" + new_section + "\n" + after
+    return before + "
+
+" + new_section + "
+" + after
+
+
+def apply_static_readme_edits(readme_text: str) -> str:
+    readme_text = readme_text.replace(
+        "Focus-Wave%20Mechanics",
+        "Focus-AI%20programming",
+    )
+    readme_text = readme_text.replace(
+        'alt="Wave Mechanics"',
+        'alt="AI programming"',
+    )
+    readme_text = readme_text.replace(
+        "Together, these repositories are intended to support **more consistent, traceable, efficient, and professionally robust technical work**.
+
+",
+        "",
+    )
+    return readme_text
 
 
 def main() -> int:
@@ -390,12 +457,15 @@ def main() -> int:
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
 
     repos = fetch_repositories(USERNAME, token=token)
+    repos = enrich_repositories(repos, token=token)
     section = build_section(repos)
 
     readme = readme_path.read_text(encoding="utf-8")
+    readme = apply_static_readme_edits(readme)
     updated = replace_between_markers(readme, section)
 
-    with readme_path.open("w", encoding="utf-8", newline="\n") as file_handle:
+    with readme_path.open("w", encoding="utf-8", newline="
+") as file_handle:
         file_handle.write(updated)
 
     print(f"Updated {readme_path} with {len(repos)} repositories.")
