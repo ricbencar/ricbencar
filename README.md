@@ -103,7 +103,7 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 - [**transpose-offshore-to-nearshore**](https://github.com/ricbencar/transpose-offshore-to-nearshore)
   This program reads offshore wave data from a CSV file and computes nearshore wave parameters at a specified depth.
-  Language: `C++` · Updated: `2026-04-06` · Stars: `1`
+  Language: `C++` · Updated: `2026-04-08` · Stars: `1`
 
 - [**wind-waves-generation**](https://github.com/ricbencar/wind-waves-generation)
   A collection of Python scripts for predicting wind-generated wave characteristics using the Sverdrup-Munk-Bretschneider (SMB) method.
