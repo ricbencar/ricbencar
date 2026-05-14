@@ -129,13 +129,13 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 ERA5 workflows, wave and wind statistics, storm characterization, long-term trends, and probabilistic sea-state analysis.
 
+- [**era5-wave-wind-data**](https://github.com/ricbencar/era5-wave-wind-data)
+  This program downloads wave & wind data from the ERA5 reanalysis model using the Climate Data Store (CDS) API provided by ECMWF.
+  Language: `Python` · Updated: `2026-05-13` · Stars: `1`
+
 - [**wave-wind-statistics**](https://github.com/ricbencar/wave-wind-statistics)
   This program produces descriptive and extreme value statistics based on wave & wind data from the ECMWF ERA5 reanalysis model.
   Language: `Python` · Updated: `2026-04-15` · Stars: `1`
-
-- [**era5-wave-wind-data**](https://github.com/ricbencar/era5-wave-wind-data)
-  This program downloads wave & wind data from the ERA5 reanalysis model using the Climate Data Store (CDS) API provided by ECMWF.
-  Language: `Python` · Updated: `2026-04-14` · Stars: `1`
 
 - [**wave-height-trends**](https://github.com/ricbencar/wave-height-trends)
   This program analyzes long-term trends in significant wave heights and applies a series of statistical techniques.
