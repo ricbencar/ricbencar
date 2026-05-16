@@ -101,13 +101,13 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes.
 
+- [**transpose-offshore-to-nearshore**](https://github.com/ricbencar/transpose-offshore-to-nearshore)
+  This program reads offshore wave data from a CSV file and computes nearshore wave parameters at a specified depth.
+  Language: `C++` · Updated: `2026-05-15` · Stars: `1`
+
 - [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation)
   This repository provides a comprehensive suite of approximations of the Wave Dispersion Equation.
   Language: `Python` · Updated: `2026-04-15` · Stars: `10`
-
-- [**transpose-offshore-to-nearshore**](https://github.com/ricbencar/transpose-offshore-to-nearshore)
-  This program reads offshore wave data from a CSV file and computes nearshore wave parameters at a specified depth.
-  Language: `C++` · Updated: `2026-04-14` · Stars: `1`
 
 - [**wind-waves-generation**](https://github.com/ricbencar/wind-waves-generation)
   A collection of Python scripts for predicting wind-generated wave characteristics using the Sverdrup-Munk-Bretschneider (SMB) method.
@@ -129,25 +129,25 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 ERA5 workflows, wave and wind statistics, storm characterization, long-term trends, and probabilistic sea-state analysis.
 
+- [**storm-peaks-analysis**](https://github.com/ricbencar/storm-peaks-analysis)
+  This script performs an analysis of storm peak events by combining storm wave data with tide level data.
+  Language: `Python` · Updated: `2026-05-15` · Stars: `1`
+
+- [**extremes-joint-distribuiton**](https://github.com/ricbencar/extremes-joint-distribuiton)
+  This script performs an environmental contour analysis on oceanographic time series data focusing on significant wave height and wave peak period.
+  Language: `Python` · Updated: `2026-05-15` · Stars: `1`
+
+- [**wave-wind-statistics**](https://github.com/ricbencar/wave-wind-statistics)
+  This program produces descriptive and extreme value statistics based on wave & wind data from the ECMWF ERA5 reanalysis model.
+  Language: `Python` · Updated: `2026-05-15` · Stars: `1`
+
 - [**era5-wave-wind-data**](https://github.com/ricbencar/era5-wave-wind-data)
   This program downloads wave & wind data from the ERA5 reanalysis model using the Climate Data Store (CDS) API provided by ECMWF.
   Language: `Python` · Updated: `2026-05-13` · Stars: `1`
 
-- [**wave-wind-statistics**](https://github.com/ricbencar/wave-wind-statistics)
-  This program produces descriptive and extreme value statistics based on wave & wind data from the ECMWF ERA5 reanalysis model.
-  Language: `Python` · Updated: `2026-04-15` · Stars: `1`
-
 - [**wave-height-trends**](https://github.com/ricbencar/wave-height-trends)
   This program analyzes long-term trends in significant wave heights and applies a series of statistical techniques.
   Language: `C++` · Updated: `2026-04-06` · Stars: `1`
-
-- [**storm-peaks-analysis**](https://github.com/ricbencar/storm-peaks-analysis)
-  This script performs an analysis of storm peak events by combining storm wave data with tide level data.
-  Language: `Python` · Updated: `2026-04-06` · Stars: `1`
-
-- [**extremes-joint-distribuiton**](https://github.com/ricbencar/extremes-joint-distribuiton)
-  This script performs an environmental contour analysis on oceanographic time series data focusing on significant wave height and wave peak period.
-  Language: `Python` · Updated: `2026-04-06` · Stars: `1`
 
 ### Engineering Automation, Data Utilities & Technical Productivity
 
