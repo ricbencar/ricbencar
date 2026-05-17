@@ -101,6 +101,10 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes.
 
+- [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
+  Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
+  Language: `Python` · Updated: `2026-05-16`
+
 - [**transpose-offshore-to-nearshore**](https://github.com/ricbencar/transpose-offshore-to-nearshore)
   This program reads offshore wave data from a CSV file and computes nearshore wave parameters at a specified depth.
   Language: `C++` · Updated: `2026-05-15` · Stars: `1`
@@ -117,10 +121,6 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
   This calculator is a computational tool that provides a high-precision solution for the fluid-structure interaction of vertical cylindrical piles.
   Language: `Jupyter Notebook` · Updated: `2026-04-06`
 
-- [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
-  Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
-  Language: `Python` · Updated: `2026-04-06`
-
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
   Language: `Jupyter Notebook` · Updated: `2026-04-06`
@@ -128,6 +128,10 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 ### Metocean Data, Extremes & Statistical Analysis
 
 ERA5 workflows, wave and wind statistics, storm characterization, long-term trends, and probabilistic sea-state analysis.
+
+- [**era5-wave-wind-data**](https://github.com/ricbencar/era5-wave-wind-data)
+  This program downloads wave & wind data from the ERA5 reanalysis model using the Climate Data Store (CDS) API provided by ECMWF.
+  Language: `Python` · Updated: `2026-05-16` · Stars: `1`
 
 - [**storm-peaks-analysis**](https://github.com/ricbencar/storm-peaks-analysis)
   This script performs an analysis of storm peak events by combining storm wave data with tide level data.
@@ -140,10 +144,6 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
 - [**wave-wind-statistics**](https://github.com/ricbencar/wave-wind-statistics)
   This program produces descriptive and extreme value statistics based on wave & wind data from the ECMWF ERA5 reanalysis model.
   Language: `Python` · Updated: `2026-05-15` · Stars: `1`
-
-- [**era5-wave-wind-data**](https://github.com/ricbencar/era5-wave-wind-data)
-  This program downloads wave & wind data from the ERA5 reanalysis model using the Climate Data Store (CDS) API provided by ECMWF.
-  Language: `Python` · Updated: `2026-05-13` · Stars: `1`
 
 - [**wave-height-trends**](https://github.com/ricbencar/wave-height-trends)
   This program analyzes long-term trends in significant wave heights and applies a series of statistical techniques.
