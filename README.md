@@ -73,6 +73,10 @@ Automatically generated from my public GitHub repositories (21 current projects)
 
 Breakwater design, coastal protection, navigation safety, overtopping, and applied maritime hydraulic engineering.
 
+- [**breakwater-cubes-calculator**](https://github.com/ricbencar/breakwater-cubes-calculator)
+  A repository with tools for the hydraulic design of rubble mound breakwater armor layers of artificial concrete units.
+  Language: `C++` · Updated: `2026-05-21`
+
 - [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions)
   This repository contains two engineering utilities for the estimation of ship characteristics based on key datasets published by PIANC.
   Language: `Python` · Updated: `2026-05-18`
@@ -87,10 +91,6 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 - [**rock-slope-calculator**](https://github.com/ricbencar/rock-slope-calculator)
   Rock slope calculator for hydraulic design and assessment of rock armoured slopes used in coastal protection, breakwaters, groynes, revetments, etc.
-  Language: `C++` · Updated: `2026-04-06`
-
-- [**breakwater-cubes-calculator**](https://github.com/ricbencar/breakwater-cubes-calculator)
-  A repository with tools for the hydraulic design of rubble mound breakwater armor layers of artificial concrete units.
   Language: `C++` · Updated: `2026-04-06`
 
 - [**wave-overtopping-calculator**](https://github.com/ricbencar/wave-overtopping-calculator)
@@ -153,6 +153,10 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
 
 Utilities for technical documentation, translation, glossary generation, and engineering data conversion.
 
+- [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
+  This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
+  Language: `C++` · Updated: `2026-05-21`
+
 - [**multilingual-engineering-glossary**](https://github.com/ricbencar/multilingual-engineering-glossary)
   This tool generates a multilingual engineering glossary and table across up to 30 global languages.
   Language: `Python` · Updated: `2026-04-06`
@@ -164,10 +168,6 @@ Utilities for technical documentation, translation, glossary generation, and eng
 - [**pandoc-markdown-converter**](https://github.com/ricbencar/pandoc-markdown-converter)
   A Python application that converts Markdown documents into DOCX and PDF using Pandoc, with attention to mathematical content, LaTeX compatibility, template discovery.
   Language: `Python` · Updated: `2026-04-06`
-
-- [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
-  This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
-  Language: `C++` · Updated: `2026-04-06`
 
 <!-- REPO-LIST:END -->
 
