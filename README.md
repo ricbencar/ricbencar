@@ -67,7 +67,7 @@ All repositories are released under the **MIT License** and they are provided **
 ## Repositories
 <!-- REPO-LIST:START -->
 
-Automatically generated from my public GitHub repositories (21 current projects).
+Automatically generated from my public GitHub repositories (22 current projects).
 
 ### Coastal & Maritime Hydraulic Design
 
@@ -75,7 +75,7 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 - [**breakwater-cubes-calculator**](https://github.com/ricbencar/breakwater-cubes-calculator)
   A repository with tools for the hydraulic design of rubble mound breakwater armor layers of artificial concrete units.
-  Language: `C++` · Updated: `2026-05-21`
+  Language: `C++` · Updated: `2026-05-28`
 
 - [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions)
   This repository contains two engineering utilities for the estimation of ship characteristics based on key datasets published by PIANC.
@@ -152,6 +152,10 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
 ### Engineering Automation, Data Utilities & Technical Productivity
 
 Utilities for technical documentation, translation, glossary generation, and engineering data conversion.
+
+- [**antifer-cubes-fine-tuning**](https://github.com/ricbencar/antifer-cubes-fine-tuning)
+  Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
+  Language: `Python` · Updated: `2026-05-28`
 
 - [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
   This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
