@@ -155,7 +155,7 @@ Utilities for technical documentation, translation, glossary generation, and eng
 
 - [**antifer-cubes-fine-tuning**](https://github.com/ricbencar/antifer-cubes-fine-tuning)
   Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
-  Language: `Python` · Updated: `2026-05-28`
+  Language: `Python` · Updated: `2026-05-29`
 
 - [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
   This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
