@@ -101,13 +101,13 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes.
 
+- [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
+  This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
+  Language: `Jupyter Notebook` · Updated: `2026-06-22`
+
 - [**wave-forces-on-piles-calculator**](https://github.com/ricbencar/wave-forces-on-piles-calculator)
   This calculator is a computational tool that provides a high-precision solution for the fluid-structure interaction of vertical cylindrical piles.
   Language: `Jupyter Notebook` · Updated: `2026-05-27` · Stars: `1`
-
-- [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
-  This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
-  Language: `Jupyter Notebook` · Updated: `2026-05-19`
 
 - [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
   Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
