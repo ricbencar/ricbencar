@@ -67,7 +67,7 @@ All repositories are released under the **MIT License** and they are provided **
 ## Repositories
 <!-- REPO-LIST:START -->
 
-Automatically generated from my public GitHub repositories (22 current projects).
+Automatically generated from my public GitHub repositories (23 current projects).
 
 ### Coastal & Maritime Hydraulic Design
 
@@ -172,6 +172,12 @@ Utilities for technical documentation, translation, glossary generation, and eng
 - [**pandoc-markdown-converter**](https://github.com/ricbencar/pandoc-markdown-converter)
   A Python application that converts Markdown documents into DOCX and PDF using Pandoc, with attention to mathematical content, LaTeX compatibility, template discovery.
   Language: `Python` · Updated: `2026-04-06`
+
+### Other Projects
+
+- [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
+  Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
+  Language: `Python` · Updated: `2026-07-02`
 
 <!-- REPO-LIST:END -->
 
