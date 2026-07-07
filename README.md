@@ -101,6 +101,10 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes.
 
+- [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
+  Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
+  Language: `Python` · Updated: `2026-07-07`
+
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
   Language: `Jupyter Notebook` · Updated: `2026-06-22`
@@ -108,10 +112,6 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 - [**wave-forces-on-piles-calculator**](https://github.com/ricbencar/wave-forces-on-piles-calculator)
   This calculator is a computational tool that provides a high-precision solution for the fluid-structure interaction of vertical cylindrical piles.
   Language: `Jupyter Notebook` · Updated: `2026-05-27` · Stars: `1`
-
-- [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
-  Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
-  Language: `Python` · Updated: `2026-05-19`
 
 - [**transpose-offshore-to-nearshore**](https://github.com/ricbencar/transpose-offshore-to-nearshore)
   This program reads offshore wave data from a CSV file and computes nearshore wave parameters at a specified depth.
