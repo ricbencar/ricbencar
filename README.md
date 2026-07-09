@@ -75,22 +75,22 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 - [**breakwater-cubes-calculator**](https://github.com/ricbencar/breakwater-cubes-calculator)
   A repository with tools for the hydraulic design of rubble mound breakwater armor layers of artificial concrete units.
-  Language: `C++` · Updated: `2026-05-28`
+  Language: `C++` · Updated: `2026-07-08`
 
 - [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions)
   This repository contains two engineering utilities for the estimation of ship characteristics based on key datasets published by PIANC.
-  Language: `Python` · Updated: `2026-05-18`
-
-- [**depth-of-closure-calculator**](https://github.com/ricbencar/depth-of-closure-calculator)
-  This repository contains computational tools designed to calculate Depth of Closure (DoC).
-  Language: `C++` · Updated: `2026-04-06`
-
-- [**navigation-calculator**](https://github.com/ricbencar/navigation-calculator)
-  This program evaluates Under Keel Clearance (UKC) for a ship transiting in shallow, restricted, or canal-type waters.
-  Language: `Python` · Updated: `2026-04-06`
+  Language: `Python` · Updated: `2026-07-08`
 
 - [**rock-slope-calculator**](https://github.com/ricbencar/rock-slope-calculator)
   Rock slope calculator for hydraulic design and assessment of rock armoured slopes used in coastal protection, breakwaters, groynes, revetments, etc.
+  Language: `C++` · Updated: `2026-07-08`
+
+- [**navigation-calculator**](https://github.com/ricbencar/navigation-calculator)
+  This program evaluates Under Keel Clearance (UKC) for a ship transiting in shallow, restricted, or canal-type waters.
+  Language: `Python` · Updated: `2026-07-08`
+
+- [**depth-of-closure-calculator**](https://github.com/ricbencar/depth-of-closure-calculator)
+  This repository contains computational tools designed to calculate Depth of Closure (DoC).
   Language: `C++` · Updated: `2026-04-06`
 
 - [**wave-overtopping-calculator**](https://github.com/ricbencar/wave-overtopping-calculator)
@@ -103,19 +103,19 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 - [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
   Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
-  Language: `Python` · Updated: `2026-07-07`
+  Language: `Python` · Updated: `2026-07-08`
 
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
-  Language: `Jupyter Notebook` · Updated: `2026-06-22`
+  Language: `Jupyter Notebook` · Updated: `2026-07-08`
+
+- [**transpose-offshore-to-nearshore**](https://github.com/ricbencar/transpose-offshore-to-nearshore)
+  This program reads offshore wave data from a CSV file and computes nearshore wave parameters at a specified depth.
+  Language: `C++` · Updated: `2026-07-08` · Stars: `1`
 
 - [**wave-forces-on-piles-calculator**](https://github.com/ricbencar/wave-forces-on-piles-calculator)
   This calculator is a computational tool that provides a high-precision solution for the fluid-structure interaction of vertical cylindrical piles.
   Language: `Jupyter Notebook` · Updated: `2026-05-27` · Stars: `1`
-
-- [**transpose-offshore-to-nearshore**](https://github.com/ricbencar/transpose-offshore-to-nearshore)
-  This program reads offshore wave data from a CSV file and computes nearshore wave parameters at a specified depth.
-  Language: `C++` · Updated: `2026-05-18` · Stars: `1`
 
 - [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation)
   This repository provides a comprehensive suite of approximations of the Wave Dispersion Equation.
@@ -131,7 +131,11 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
 
 - [**era5-wave-wind-data**](https://github.com/ricbencar/era5-wave-wind-data)
   This program downloads wave & wind data from the ERA5 reanalysis model using the Climate Data Store (CDS) API provided by ECMWF.
-  Language: `Python` · Updated: `2026-05-20` · Stars: `1`
+  Language: `Python` · Updated: `2026-07-08` · Stars: `1`
+
+- [**wave-wind-statistics**](https://github.com/ricbencar/wave-wind-statistics)
+  This program produces descriptive and extreme value statistics based on wave & wind data from the ECMWF ERA5 reanalysis model.
+  Language: `Python` · Updated: `2026-07-08` · Stars: `1`
 
 - [**extremes-joint-distribuiton**](https://github.com/ricbencar/extremes-joint-distribuiton)
   This script performs an environmental contour analysis on oceanographic time series data focusing on significant wave height and wave peak period.
@@ -145,21 +149,21 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
   This program analyzes long-term trends in significant wave heights and applies a series of statistical techniques.
   Language: `C++` · Updated: `2026-05-18` · Stars: `1`
 
-- [**wave-wind-statistics**](https://github.com/ricbencar/wave-wind-statistics)
-  This program produces descriptive and extreme value statistics based on wave & wind data from the ECMWF ERA5 reanalysis model.
-  Language: `Python` · Updated: `2026-05-15` · Stars: `1`
-
 ### Engineering Automation, Data Utilities & Technical Productivity
 
 Utilities for technical documentation, translation, glossary generation, and engineering data conversion.
 
 - [**antifer-cubes-fine-tuning**](https://github.com/ricbencar/antifer-cubes-fine-tuning)
   Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
-  Language: `Jupyter Notebook` · Updated: `2026-06-09`
+  Language: `Jupyter Notebook` · Updated: `2026-07-08`
 
 - [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
   This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
-  Language: `C++` · Updated: `2026-05-21`
+  Language: `C++` · Updated: `2026-07-08`
+
+- [**pandoc-markdown-converter**](https://github.com/ricbencar/pandoc-markdown-converter)
+  A Python application that converts Markdown documents into DOCX and PDF using Pandoc, with attention to mathematical content, LaTeX compatibility, template discovery.
+  Language: `Python` · Updated: `2026-07-08`
 
 - [**multilingual-engineering-glossary**](https://github.com/ricbencar/multilingual-engineering-glossary)
   This tool generates a multilingual engineering glossary and table across up to 30 global languages.
@@ -167,10 +171,6 @@ Utilities for technical documentation, translation, glossary generation, and eng
 
 - [**ai-document-translator**](https://github.com/ricbencar/ai-document-translator)
   Advanced AI-powered document translation engine designed specifically for engineering and technical files.
-  Language: `Python` · Updated: `2026-04-06`
-
-- [**pandoc-markdown-converter**](https://github.com/ricbencar/pandoc-markdown-converter)
-  A Python application that converts Markdown documents into DOCX and PDF using Pandoc, with attention to mathematical content, LaTeX compatibility, template discovery.
   Language: `Python` · Updated: `2026-04-06`
 
 ### Other Projects
