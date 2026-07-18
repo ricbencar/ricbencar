@@ -103,7 +103,7 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 - [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
   Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
-  Language: `Python` · Updated: `2026-07-14`
+  Language: `Python` · Updated: `2026-07-17`
 
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
@@ -131,7 +131,7 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
 
 - [**galton-board-statistics**](https://github.com/ricbencar/galton-board-statistics)
   An interactive Python Galton board simulator that visualizes Bernoulli trials, binomial probability, Pascal’s triangle, and statistical convergence with live animations.
-  Language: `Python` · Updated: `2026-07-14`
+  Language: `Python` · Updated: `2026-07-17`
 
 - [**era5-wave-wind-data**](https://github.com/ricbencar/era5-wave-wind-data)
   This program downloads wave & wind data from the ERA5 reanalysis model using the Climate Data Store (CDS) API provided by ECMWF.
