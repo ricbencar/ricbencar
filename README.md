@@ -67,23 +67,23 @@ All repositories are released under the **MIT License** and they are provided **
 ## Repositories
 <!-- REPO-LIST:START -->
 
-Automatically generated from my public GitHub repositories (24 current projects).
+Automatically generated from my public GitHub repositories (25 current projects).
 
 ### Coastal & Maritime Hydraulic Design
 
 Breakwater design, coastal protection, navigation safety, overtopping, and applied maritime hydraulic engineering.
 
+- [**rock-slope-calculator**](https://github.com/ricbencar/rock-slope-calculator)
+  Rock slope calculator for hydraulic design and assessment of rock armoured slopes used in coastal protection, breakwaters, groynes, revetments, etc.
+  Language: `C++` · Updated: `2026-07-28`
+
 - [**breakwater-cubes-calculator**](https://github.com/ricbencar/breakwater-cubes-calculator)
   A repository with tools for the hydraulic design of rubble mound breakwater armor layers of artificial concrete units.
-  Language: `C++` · Updated: `2026-07-08`
+  Language: `C++` · Updated: `2026-07-28`
 
 - [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions)
   This repository contains two engineering utilities for the estimation of ship characteristics based on key datasets published by PIANC.
   Language: `Python` · Updated: `2026-07-08`
-
-- [**rock-slope-calculator**](https://github.com/ricbencar/rock-slope-calculator)
-  Rock slope calculator for hydraulic design and assessment of rock armoured slopes used in coastal protection, breakwaters, groynes, revetments, etc.
-  Language: `C++` · Updated: `2026-07-08`
 
 - [**navigation-calculator**](https://github.com/ricbencar/navigation-calculator)
   This program evaluates Under Keel Clearance (UKC) for a ship transiting in shallow, restricted, or canal-type waters.
@@ -103,11 +103,11 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
-  Language: `Jupyter Notebook` · Updated: `2026-07-27`
+  Language: `Jupyter Notebook` · Updated: `2026-07-28`
 
 - [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
   Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
-  Language: `Python` · Updated: `2026-07-21`
+  Language: `Python` · Updated: `2026-07-28`
 
 - [**transpose-offshore-to-nearshore**](https://github.com/ricbencar/transpose-offshore-to-nearshore)
   This program reads offshore wave data from a CSV file and computes nearshore wave parameters at a specified depth.
@@ -178,6 +178,10 @@ Utilities for technical documentation, translation, glossary generation, and eng
   Language: `Python` · Updated: `2026-04-06`
 
 ### Other Projects
+
+- [**curve-expert-user-models**](https://github.com/ricbencar/curve-expert-user-models)
+  A library of 1,000 custom regression models for CurveExpert Professional, covering scientific, engineering, and statistical applications.
+  Updated: `2026-07-28`
 
 - [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
   Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
