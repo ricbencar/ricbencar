@@ -75,7 +75,7 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 - [**rock-slope-calculator**](https://github.com/ricbencar/rock-slope-calculator)
   Rock slope calculator for hydraulic design and assessment of rock armoured slopes used in coastal protection, breakwaters, groynes, revetments, etc.
-  Language: `C++` · Updated: `2026-07-28`
+  Language: `C++` · Updated: `2026-07-29`
 
 - [**breakwater-cubes-calculator**](https://github.com/ricbencar/breakwater-cubes-calculator)
   A repository with tools for the hydraulic design of rubble mound breakwater armor layers of artificial concrete units.
@@ -179,13 +179,13 @@ Utilities for technical documentation, translation, glossary generation, and eng
 
 ### Other Projects
 
+- [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
+  Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
+  Language: `Python` · Updated: `2026-07-29`
+
 - [**curve-expert-user-models**](https://github.com/ricbencar/curve-expert-user-models)
   A library of 1,000 custom regression models for CurveExpert Professional, covering scientific, engineering, and statistical applications.
   Updated: `2026-07-28`
-
-- [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
-  Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
-  Language: `Python` · Updated: `2026-07-02`
 
 <!-- REPO-LIST:END -->
 
