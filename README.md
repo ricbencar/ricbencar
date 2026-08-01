@@ -67,7 +67,7 @@ All repositories are released under the **MIT License** and they are provided **
 ## Repositories
 <!-- REPO-LIST:START -->
 
-Automatically generated from my public GitHub repositories (25 current projects).
+Automatically generated from my public GitHub repositories (26 current projects).
 
 ### Coastal & Maritime Hydraulic Design
 
@@ -178,6 +178,10 @@ Utilities for technical documentation, translation, glossary generation, and eng
   Language: `Python` · Updated: `2026-04-06`
 
 ### Other Projects
+
+- [**wind-speed-conversion**](https://github.com/ricbencar/wind-speed-conversion)
+  A Python/Tkinter calculator for 10-minute wind return levels, associated peak gusts, exceedance probabilities, and squall scenarios.
+  Language: `Python` · Updated: `2026-07-31`
 
 - [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
   Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
