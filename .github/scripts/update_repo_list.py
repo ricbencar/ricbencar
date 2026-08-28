@@ -18,6 +18,8 @@ FALLBACK_CATEGORY = "Other Projects"
 CATEGORY_RULES = {
     "Coastal & Maritime Hydraulic Design": [
         "breakwater",
+        "antifer",
+        "antifer-cubes-fine-tuning",
         "rock-slope",
         "rock slope",
         "coastal protection",
@@ -54,11 +56,11 @@ CATEGORY_RULES = {
         "wind waves",
         "wind-generated wave",
         "wind generated wave",
-        "smb",
+        "wave-forces",
+        "wave forces",
         "sverdrup-munk-bretschneider",
         "sverdrup munk bretschneider",
         "wave-transformation",
-        "wave transformation",
     ],
     "Metocean Data, Extremes & Statistical Analysis": [
         "metocean",
@@ -75,6 +77,7 @@ CATEGORY_RULES = {
         "statistics",
         "trend",
         "climatology",
+        "wind-speed-conversion",
     ],
     "Engineering Automation, Data Utilities & Technical Productivity": [
         "pandoc",
@@ -87,6 +90,8 @@ CATEGORY_RULES = {
         "xyz",
         "data utilities",
         "engineering automation",
+        "prismoidal",
+        "curve-expert",
         "technical productivity",
     ],
 }
