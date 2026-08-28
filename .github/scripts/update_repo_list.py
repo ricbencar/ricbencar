@@ -79,7 +79,7 @@ CATEGORY_RULES = {
         "climatology",
         "wind-speed-conversion",
     ],
-    "Engineering Automation, Data Utilities & Technical Productivity": [
+    "Engineering Automation, Data Utilities & Productivity": [
         "pandoc",
         "markdown",
         "translator",
@@ -106,7 +106,7 @@ SECTION_INTROS = {
     "Metocean Data, Extremes & Statistical Analysis": (
         "ERA5 workflows, wave and wind statistics, storm characterization, long-term trends, and probabilistic sea-state analysis."
     ),
-    "Engineering Automation, Data Utilities & Technical Productivity": (
+    "Engineering Automation, Data Utilities & Productivity": (
         "Utilities for technical documentation, translation, glossary generation, and engineering data conversion."
     ),
 }
@@ -236,7 +236,7 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
         "Coastal & Maritime Hydraulic Design",
         "Wave Mechanics, Transformation & Coastal Processes",
         "Metocean Data, Extremes & Statistical Analysis",
-        "Engineering Automation, Data Utilities & Technical Productivity",
+        "Engineering Automation, Data Utilities & Productivity",
     ]
     if grouped.get(FALLBACK_CATEGORY):
         ordered_categories.append(FALLBACK_CATEGORY)
