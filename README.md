@@ -81,6 +81,10 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
   A repository with tools for the hydraulic design of rubble mound breakwater armor layers of artificial concrete units.
   Language: `C++` · Updated: `2026-07-28`
 
+- [**antifer-cubes-fine-tuning**](https://github.com/ricbencar/antifer-cubes-fine-tuning)
+  Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
+  Language: `Jupyter Notebook` · Updated: `2026-07-08`
+
 - [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions)
   This repository contains two engineering utilities for the estimation of ship characteristics based on key datasets published by PIANC.
   Language: `Python` · Updated: `2026-07-08`
@@ -129,6 +133,10 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 ERA5 workflows, wave and wind statistics, storm characterization, long-term trends, and probabilistic sea-state analysis.
 
+- [**wind-speed-conversion**](https://github.com/ricbencar/wind-speed-conversion)
+  A Python/Tkinter calculator for 10-minute wind return levels, associated peak gusts, exceedance probabilities, and squall scenarios.
+  Language: `Python` · Updated: `2026-07-31`
+
 - [**era5-wave-wind-data**](https://github.com/ricbencar/era5-wave-wind-data)
   This program downloads wave & wind data from the ERA5 reanalysis model using the Climate Data Store (CDS) API provided by ECMWF.
   Language: `Python` · Updated: `2026-07-27` · Stars: `1`
@@ -153,13 +161,17 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
   This program analyzes long-term trends in significant wave heights and applies a series of statistical techniques.
   Language: `C++` · Updated: `2026-05-18` · Stars: `1`
 
-### Engineering Automation, Data Utilities & Technical Productivity
+### Engineering Automation, Data Utilities & Productivity
 
 Utilities for technical documentation, translation, glossary generation, and engineering data conversion.
 
-- [**antifer-cubes-fine-tuning**](https://github.com/ricbencar/antifer-cubes-fine-tuning)
-  Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
-  Language: `Jupyter Notebook` · Updated: `2026-07-08`
+- [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
+  Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
+  Language: `Python` · Updated: `2026-07-29`
+
+- [**curve-expert-user-models**](https://github.com/ricbencar/curve-expert-user-models)
+  A library of 1,000 custom regression models for CurveExpert Professional, covering scientific, engineering, and statistical applications.
+  Updated: `2026-07-28`
 
 - [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
   This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
@@ -176,20 +188,6 @@ Utilities for technical documentation, translation, glossary generation, and eng
 - [**ai-document-translator**](https://github.com/ricbencar/ai-document-translator)
   Advanced AI-powered document translation engine designed specifically for engineering and technical files.
   Language: `Python` · Updated: `2026-04-06`
-
-### Other Projects
-
-- [**wind-speed-conversion**](https://github.com/ricbencar/wind-speed-conversion)
-  A Python/Tkinter calculator for 10-minute wind return levels, associated peak gusts, exceedance probabilities, and squall scenarios.
-  Language: `Python` · Updated: `2026-07-31`
-
-- [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
-  Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
-  Language: `Python` · Updated: `2026-07-29`
-
-- [**curve-expert-user-models**](https://github.com/ricbencar/curve-expert-user-models)
-  A library of 1,000 custom regression models for CurveExpert Professional, covering scientific, engineering, and statistical applications.
-  Updated: `2026-07-28`
 
 <!-- REPO-LIST:END -->
 
