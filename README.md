@@ -67,11 +67,19 @@ All repositories are released under the **MIT License** and they are provided **
 ## Repositories
 <!-- REPO-LIST:START -->
 
-Automatically generated from my public GitHub repositories (26 current projects).
+Automatically generated from my public GitHub repositories (27 current projects).
 
 ### Coastal & Maritime Hydraulic Design
 
 Breakwater design, coastal protection, navigation safety, overtopping, and applied maritime hydraulic engineering.
+
+- [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions)
+  This repository contains two engineering utilities for the estimation of ship characteristics based on key datasets published by PIANC.
+  Language: `HTML` · Updated: `2026-08-31`
+
+- [**depth-of-closure-calculator**](https://github.com/ricbencar/depth-of-closure-calculator)
+  This repository contains computational tools designed to calculate Depth of Closure (DoC).
+  Language: `HTML` · Updated: `2026-08-31`
 
 - [**rock-slope-calculator**](https://github.com/ricbencar/rock-slope-calculator)
   Rock slope calculator for hydraulic design and assessment of rock armoured slopes used in coastal protection, breakwaters, groynes, revetments, etc.
@@ -85,17 +93,9 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
   Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
   Language: `Jupyter Notebook` · Updated: `2026-07-08`
 
-- [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions)
-  This repository contains two engineering utilities for the estimation of ship characteristics based on key datasets published by PIANC.
-  Language: `Python` · Updated: `2026-07-08`
-
 - [**navigation-calculator**](https://github.com/ricbencar/navigation-calculator)
   This program evaluates Under Keel Clearance (UKC) for a ship transiting in shallow, restricted, or canal-type waters.
   Language: `Python` · Updated: `2026-07-08`
-
-- [**depth-of-closure-calculator**](https://github.com/ricbencar/depth-of-closure-calculator)
-  This repository contains computational tools designed to calculate Depth of Closure (DoC).
-  Language: `C++` · Updated: `2026-04-06`
 
 - [**wave-overtopping-calculator**](https://github.com/ricbencar/wave-overtopping-calculator)
   This program uses neural network ensembles to predict wave overtopping discharges at coastal structures for given wave conditions and structure geometry.
@@ -105,9 +105,17 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes.
 
+- [**wave-forces-on-pontoon**](https://github.com/ricbencar/wave-forces-on-pontoon)
+  Calculator for horizontal environmental actions on a rectangular pontoon restrained by vertical piles or guides.
+  Language: `Python` · Updated: `2026-08-31`
+
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
-  Language: `Jupyter Notebook` · Updated: `2026-07-28`
+  Language: `Jupyter Notebook` · Updated: `2026-08-31`
+
+- [**wind-waves-generation**](https://github.com/ricbencar/wind-waves-generation)
+  A collection of Python scripts for predicting wind-generated wave characteristics using the Sverdrup-Munk-Bretschneider (SMB) method.
+  Language: `Python` · Updated: `2026-08-31`
 
 - [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
   Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
@@ -124,10 +132,6 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 - [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation)
   This repository provides a comprehensive suite of approximations of the Wave Dispersion Equation.
   Language: `Python` · Updated: `2026-04-15` · Stars: `10`
-
-- [**wind-waves-generation**](https://github.com/ricbencar/wind-waves-generation)
-  A collection of Python scripts for predicting wind-generated wave characteristics using the Sverdrup-Munk-Bretschneider (SMB) method.
-  Language: `Python` · Updated: `2026-04-06`
 
 ### Metocean Data, Extremes & Statistical Analysis
 
