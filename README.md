@@ -67,7 +67,7 @@ All repositories are released under the **MIT License** and they are provided **
 ## Repositories
 <!-- REPO-LIST:START -->
 
-Automatically generated from my public GitHub repositories (27 current projects).
+Automatically generated from my public GitHub repositories (28 current projects).
 
 ### Coastal & Maritime Hydraulic Design
 
@@ -168,6 +168,10 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
 ### Engineering Automation, Data Utilities & Productivity
 
 Utilities for technical documentation, translation, glossary generation, and engineering data conversion.
+
+- [**cad-to-gis-convert**](https://github.com/ricbencar/cad-to-gis-convert)
+  Python application for converting engineering CAD drawings in DXF/DWG format into GIS vector datasets.
+  Language: `Python` · Updated: `2026-09-07`
 
 - [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
   Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
