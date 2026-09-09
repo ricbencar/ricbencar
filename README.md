@@ -107,7 +107,7 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 - [**wave-forces-on-pontoon**](https://github.com/ricbencar/wave-forces-on-pontoon)
   Calculator for horizontal environmental actions on a rectangular pontoon restrained by vertical piles or guides.
-  Language: `Python` · Updated: `2026-09-07`
+  Language: `Python` · Updated: `2026-09-08`
 
 - [**wind-waves-generation**](https://github.com/ricbencar/wind-waves-generation)
   A collection of Python scripts for predicting wind-generated wave characteristics using the Sverdrup-Munk-Bretschneider (SMB) method.
@@ -171,7 +171,7 @@ Utilities for technical documentation, translation, glossary generation, and eng
 
 - [**cad-to-gis-convert**](https://github.com/ricbencar/cad-to-gis-convert)
   Python application for converting engineering CAD drawings in DXF/DWG format into GIS vector datasets.
-  Language: `Python` · Updated: `2026-09-07`
+  Language: `Python` · Updated: `2026-09-08`
 
 - [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
   Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
