@@ -106,8 +106,8 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes.
 
 - [**wave-forces-on-pontoon**](https://github.com/ricbencar/wave-forces-on-pontoon)
-  Calculator for horizontal environmental actions on a rectangular pontoon restrained by vertical piles or guides.
-  Language: `Python` · Updated: `2026-09-08`
+  Calculator for horizontal environmental actions on a floating pontoon restrained by vertical piles or guides.
+  Language: `Python` · Updated: `2026-09-09`
 
 - [**wind-waves-generation**](https://github.com/ricbencar/wind-waves-generation)
   A collection of Python scripts for predicting wind-generated wave characteristics using the Sverdrup-Munk-Bretschneider (SMB) method.
