@@ -67,7 +67,7 @@ All repositories are released under the **MIT License** and they are provided **
 ## Repositories
 <!-- REPO-LIST:START -->
 
-Automatically generated from my public GitHub repositories (28 current projects).
+Automatically generated from my public GitHub repositories (27 current projects).
 
 ### Coastal & Maritime Hydraulic Design
 
@@ -191,10 +191,6 @@ Utilities for technical documentation, translation, glossary generation, and eng
 
 - [**multilingual-engineering-glossary**](https://github.com/ricbencar/multilingual-engineering-glossary)
   This tool generates a multilingual engineering glossary and table across up to 30 global languages.
-  Language: `Python` · Updated: `2026-04-06`
-
-- [**ai-document-translator**](https://github.com/ricbencar/ai-document-translator)
-  Advanced AI-powered document translation engine designed specifically for engineering and technical files.
   Language: `Python` · Updated: `2026-04-06`
 
 <!-- REPO-LIST:END -->
