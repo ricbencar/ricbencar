@@ -67,7 +67,7 @@ All repositories are released under the **MIT License** and they are provided **
 ## Repositories
 <!-- REPO-LIST:START -->
 
-Automatically generated from my public GitHub repositories (28 current projects).
+Automatically generated from my public GitHub repositories (29 current projects).
 
 ### Coastal & Maritime Hydraulic Design
 
@@ -196,6 +196,12 @@ Utilities for technical documentation, translation, glossary generation, and eng
 - [**multilingual-engineering-glossary**](https://github.com/ricbencar/multilingual-engineering-glossary)
   This tool generates a multilingual engineering glossary and table across up to 30 global languages.
   Language: `Python` · Updated: `2026-04-06`
+
+### Other Projects
+
+- [**global-mean-sea-level**](https://github.com/ricbencar/global-mean-sea-level)
+  Physical meaning, mathematical relationships and application of the WGS84 reference ellipsoid, the EGM2008 geoid and the experimental DTU25 mean sea surface referred to 2023.
+  Language: `Python` · Updated: `2026-09-28`
 
 <!-- REPO-LIST:END -->
 
