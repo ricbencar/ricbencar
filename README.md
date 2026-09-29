@@ -169,13 +169,13 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
 
 Utilities for technical documentation, translation, glossary generation, and engineering data conversion.
 
+- [**cad-to-gis-convert**](https://github.com/ricbencar/cad-to-gis-convert)
+  Python application for converting engineering CAD drawings in DXF/DWG format into GIS vector datasets.
+  Language: `Python` · Updated: `2026-09-29` · Stars: `1`
+
 - [**cad-epsg-conversion**](https://github.com/ricbencar/cad-epsg-conversion)
   Python tool for precise coordinate transformation of CAD drawings (DXF/DWG) to mainland Portugal's official reference system (PT-TM06/ETRS89 - EPSG:3763).
   Language: `Python` · Updated: `2026-09-23`
-
-- [**cad-to-gis-convert**](https://github.com/ricbencar/cad-to-gis-convert)
-  Python application for converting engineering CAD drawings in DXF/DWG format into GIS vector datasets.
-  Language: `Python` · Updated: `2026-09-08`
 
 - [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
   Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
