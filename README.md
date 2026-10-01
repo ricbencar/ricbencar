@@ -105,6 +105,10 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes.
 
+- [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation)
+  This repository provides a comprehensive suite of approximations of the Wave Dispersion Equation.
+  Language: `Python` · Updated: `2026-10-01` · Stars: `10`
+
 - [**wave-forces-on-pontoon**](https://github.com/ricbencar/wave-forces-on-pontoon)
   Calculator for horizontal environmental actions on a floating pontoon restrained by vertical piles or guides.
   Language: `Python` · Updated: `2026-09-09`
@@ -128,10 +132,6 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 - [**wave-forces-on-piles-calculator**](https://github.com/ricbencar/wave-forces-on-piles-calculator)
   This calculator is a computational tool that provides a high-precision solution for the fluid-structure interaction of vertical cylindrical piles.
   Language: `Jupyter Notebook` · Updated: `2026-05-27` · Stars: `1`
-
-- [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation)
-  This repository provides a comprehensive suite of approximations of the Wave Dispersion Equation.
-  Language: `Python` · Updated: `2026-04-15` · Stars: `10`
 
 ### Metocean Data, Extremes & Statistical Analysis
 
