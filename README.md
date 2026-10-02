@@ -73,6 +73,10 @@ Automatically generated from my public GitHub repositories (29 current projects)
 
 Breakwater design, coastal protection, navigation safety, overtopping, and applied maritime hydraulic engineering.
 
+- [**antifer-cubes-fine-tuning**](https://github.com/ricbencar/antifer-cubes-fine-tuning)
+  Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
+  Language: `Jupyter Notebook` · Updated: `2026-10-02`
+
 - [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions)
   This repository contains two engineering utilities for the estimation of ship characteristics based on key datasets published by PIANC.
   Language: `HTML` · Updated: `2026-08-31`
@@ -89,10 +93,6 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
   A repository with tools for the hydraulic design of rubble mound breakwater armor layers of artificial concrete units.
   Language: `C++` · Updated: `2026-07-28`
 
-- [**antifer-cubes-fine-tuning**](https://github.com/ricbencar/antifer-cubes-fine-tuning)
-  Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
-  Language: `Jupyter Notebook` · Updated: `2026-07-08`
-
 - [**navigation-calculator**](https://github.com/ricbencar/navigation-calculator)
   This program evaluates Under Keel Clearance (UKC) for a ship transiting in shallow, restricted, or canal-type waters.
   Language: `Python` · Updated: `2026-07-08`
@@ -105,6 +105,10 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes.
 
+- [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
+  Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
+  Language: `Python` · Updated: `2026-10-02`
+
 - [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation)
   This repository provides a comprehensive suite of approximations of the Wave Dispersion Equation.
   Language: `Python` · Updated: `2026-10-01` · Stars: `10`
@@ -116,10 +120,6 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 - [**wind-waves-generation**](https://github.com/ricbencar/wind-waves-generation)
   A collection of Python scripts for predicting wind-generated wave characteristics using the Sverdrup-Munk-Bretschneider (SMB) method.
   Language: `Python` · Updated: `2026-09-02`
-
-- [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
-  Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
-  Language: `Python` · Updated: `2026-09-01`
 
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
