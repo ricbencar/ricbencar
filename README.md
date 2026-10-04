@@ -53,7 +53,6 @@ All repositories are released under the **MIT License** and they are provided **
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++" />
   <img src="https://img.shields.io/badge/Fortran-734F96?style=flat-square&logo=fortran&logoColor=white" alt="Fortran" />
-  <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R" />
   <img src="https://img.shields.io/badge/VBA-217346?style=flat-square&logo=microsoft-excel&logoColor=white" alt="VBA" />
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux" />
@@ -62,8 +61,6 @@ All repositories are released under the **MIT License** and they are provided **
   <img src="https://img.shields.io/badge/ECMWF%20%2F%20ERA5-003366?style=flat-square" alt="ECMWF ERA5" />
   <img src="https://img.shields.io/badge/GRIB%20%2F%20CDO-475569?style=flat-square" alt="GRIB and CDO" />
   <img src="https://img.shields.io/badge/Coastal%20Engineering-0F766E?style=flat-square" alt="Coastal Engineering" />
-  <img src="https://img.shields.io/badge/Hydraulics-1D4ED8?style=flat-square" alt="Hydraulics" />
-  <img src="https://img.shields.io/badge/Extreme%20Value%20Analysis-7C3AED?style=flat-square" alt="Extreme Value Analysis" />
 </p>
 
 ---
