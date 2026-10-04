@@ -24,11 +24,11 @@
 
 ## Profile
 
-I'm a civil engineer working in **port and coastal engineering, maritime hydraulics and wave mechanics**, with an interest in **technical computation and AI programming**, as ilustrated in the tools in this archive. My GitHub profile is centered on **practical engineering tools** for metocean analysis, nonlinear wave calculation, coastal protection design, navigation studies, and technical workflow automation.
+I'm a civil engineer working in **port and coastal engineering, maritime hydraulics and wave mechanics**, with an interest in **technical computation and AI programming**, as illustrated in the tools in this archive. My GitHub profile is centered on **practical engineering tools** for metocean analysis, nonlinear wave calculation, coastal protection design, navigation studies, geographic information systems and technical workflow automation.
 
-The work published here spans a **broad and technical range of engineering topics**. It includes **wave dispersion and nonlinear wave solvers**, **ERA5-based workflows for wave and wind data**, **metocean statistics**, **storm peak and trend analysis**, **extreme value assessment**, **environmental contour generation**, and **joint probability modelling**. It also covers tools for **offshore-to-nearshore wave transposition**, **wave transformation over shallow foreshores**, and **wave overtopping prediction** for a range of **coastal and maritime engineering applications**.
+The work published here spans over several engineering topics. It includes **wave dispersion and nonlinear wave solvers**, **ERA5-based workflows**, **metocean statistics**, **storm peak analysis**, **extreme value assessment**, **environmental contour generation**, and **joint probability modelling**. It also covers tools for **offshore-to-nearshore wave transposition**, **wave transformation over shallow foreshores**, and **wave overtopping prediction** for a range of **coastal and maritime engineering applications**.
 
-In addition, it also includes **computational tools for the hydraulic design of breakwaters and rock slopes used in coastal protection**, as well as applications for **navigation studies**, **under-keel clearance assessment**, and **PIANC-based ship-dimension analysis** and **wave loading on piles**. Some repositories focus on engineering workflows through **technical document conversion**, **translation**, **glossary generation**, **data export**, and related productivity tools.
+In addition, it also includes **computational tools for the hydraulic design of breakwaters and rock slopes used in coastal protection**, as well as applications for **navigation studies**, **under-keel clearance assessment**, and **PIANC-based ship-dimension analysis** and **wave loading on piles**. Some repositories focus on engineering workflows through **GIS and CAD processing**, **coordinate and vertical reference systems**, **technical document conversion**, **glossary generation**, **data export**, and related productivity tools.
 
 All repositories are released under the **MIT License** and they are provided **as is**, without any warranty of accuracy, completeness, fitness for a particular purpose, or suitability for project-critical decisions. They should therefore be used **at the user’s own risk**, with appropriate engineering judgment, independent verification, and technical review before application in professional studies, design, or operational contexts.
 
@@ -42,7 +42,8 @@ All repositories are released under the **MIT License** and they are provided **
 | **Metocean data and statistics** | ERA5 wave and wind extraction, descriptive statistics, storm peaks, long-term trends, extreme value analysis, and joint distributions |
 | **Coastal and maritime hydraulics** | Wave overtopping, rubble-mound breakwater design, rock slopes, armor stability, and depth-of-closure assessment |
 | **Navigation and ship-related utilities** | Under-keel clearance, restricted-water navigation checks, and PIANC-based ship-dimension tools |
-| **Engineering productivity** | Markdown conversion, technical document translation, multilingual glossary generation, and data/CAD utilities |
+| **GIS & CAD Processing Utilities** | Coordinate transformation, vertical reference systems, CAD-to-GIS conversion, and XYZ/DXF data processing |
+| **Engineering Utilities & Productivity** | Prismoidal volume calculation, regression models, Markdown conversion, multilingual glossary generation, and engineering data utilities |
 
 ---
 
@@ -71,15 +72,11 @@ Automatically generated from my public GitHub repositories (29 current projects)
 
 ### Coastal & Maritime Hydraulic Design
 
-Breakwater design, coastal protection, navigation safety, overtopping, and applied maritime hydraulic engineering.
+Breakwater design, coastal protection, overtopping, and applied maritime hydraulic engineering.
 
 - [**antifer-cubes-fine-tuning**](https://github.com/ricbencar/antifer-cubes-fine-tuning)
   Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
   Language: `Jupyter Notebook` · Updated: `2026-10-02`
-
-- [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions)
-  This repository contains two engineering utilities for the estimation of ship characteristics based on key datasets published by PIANC.
-  Language: `HTML` · Updated: `2026-08-31`
 
 - [**depth-of-closure-calculator**](https://github.com/ricbencar/depth-of-closure-calculator)
   This repository contains computational tools designed to calculate Depth of Closure (DoC).
@@ -93,10 +90,6 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
   A repository with tools for the hydraulic design of rubble mound breakwater armor layers of artificial concrete units.
   Language: `C++` · Updated: `2026-07-28`
 
-- [**navigation-calculator**](https://github.com/ricbencar/navigation-calculator)
-  This program evaluates Under Keel Clearance (UKC) for a ship transiting in shallow, restricted, or canal-type waters.
-  Language: `Python` · Updated: `2026-07-08`
-
 - [**wave-overtopping-calculator**](https://github.com/ricbencar/wave-overtopping-calculator)
   This program uses neural network ensembles to predict wave overtopping discharges at coastal structures for given wave conditions and structure geometry.
   Language: `Python` · Updated: `2026-04-06`
@@ -105,17 +98,13 @@ Breakwater design, coastal protection, navigation safety, overtopping, and appli
 
 Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes.
 
-- [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation)
-  This repository provides a comprehensive suite of approximations of the Wave Dispersion Equation.
-  Language: `Python` · Updated: `2026-10-02` · Stars: `10`
-
-- [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
-  This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
-  Language: `Jupyter Notebook` · Updated: `2026-10-02`
-
 - [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
   Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
   Language: `Python` · Updated: `2026-10-02`
+
+- [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation)
+  This repository provides a comprehensive suite of approximations of the Wave Dispersion Equation.
+  Language: `Python` · Updated: `2026-10-01` · Stars: `10`
 
 - [**wave-forces-on-pontoon**](https://github.com/ricbencar/wave-forces-on-pontoon)
   Calculator for horizontal environmental actions on a floating pontoon restrained by vertical piles or guides.
@@ -124,6 +113,10 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 - [**wind-waves-generation**](https://github.com/ricbencar/wind-waves-generation)
   A collection of Python scripts for predicting wind-generated wave characteristics using the Sverdrup-Munk-Bretschneider (SMB) method.
   Language: `Python` · Updated: `2026-09-02`
+
+- [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
+  This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
+  Language: `Jupyter Notebook` · Updated: `2026-08-31`
 
 - [**transpose-offshore-to-nearshore**](https://github.com/ricbencar/transpose-offshore-to-nearshore)
   This program reads offshore wave data from a CSV file and computes nearshore wave parameters at a specified depth.
@@ -165,17 +158,41 @@ ERA5 workflows, wave and wind statistics, storm characterization, long-term tren
   This program analyzes long-term trends in significant wave heights and applies a series of statistical techniques.
   Language: `C++` · Updated: `2026-05-18` · Stars: `1`
 
-### Engineering Automation, Data Utilities & Productivity
+### Navigation and Ship-Related Utilities
 
-Utilities for technical documentation, translation, glossary generation, and engineering data conversion.
+Under Keel Clearance (UKC) estimation for shallow, restricted, or canal-type waters and estimation of ship characteristics.
+
+- [**pianc-ship-dimensions**](https://github.com/ricbencar/pianc-ship-dimensions)
+  This repository contains two engineering utilities for the estimation of ship characteristics based on key datasets published by PIANC.
+  Language: `HTML` · Updated: `2026-08-31`
+
+- [**navigation-calculator**](https://github.com/ricbencar/navigation-calculator)
+  This program evaluates Under Keel Clearance (UKC) for a ship transiting in shallow, restricted, or canal-type waters.
+  Language: `Python` · Updated: `2026-07-08`
+
+### GIS & CAD Processing Utilities
+
+Utilities for conversion of GIS & CAD among reference systems and conversion of CAD drawings into GIS vector datasets.
 
 - [**cad-to-gis-convert**](https://github.com/ricbencar/cad-to-gis-convert)
   Python application for converting engineering CAD drawings in DXF/DWG format into GIS vector datasets.
   Language: `Python` · Updated: `2026-09-29` · Stars: `1`
 
+- [**global-mean-sea-level**](https://github.com/ricbencar/global-mean-sea-level)
+  Physical meaning, mathematical relationships and application of the WGS84 reference ellipsoid, the EGM2008 geoid and the experimental DTU25 mean sea surface referred to 2023.
+  Language: `Python` · Updated: `2026-09-28`
+
 - [**cad-epsg-conversion**](https://github.com/ricbencar/cad-epsg-conversion)
   Python tool for precise coordinate transformation of CAD drawings (DXF/DWG) to mainland Portugal's official reference system (PT-TM06/ETRS89 - EPSG:3763).
   Language: `Python` · Updated: `2026-09-23`
+
+- [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
+  This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
+  Language: `C++` · Updated: `2026-07-08`
+
+### Engineering Utilities & Productivity
+
+Utilities for technical documentation, glossary generation, and engineering data conversion.
 
 - [**prismoidal-volume-calculator**](https://github.com/ricbencar/prismoidal-volume-calculator)
   Python GUI calculator for volumes of classical solids, prismoids, frusta, and irregular homothetic polygonal forms, with 3D views and calculation reports.
@@ -185,10 +202,6 @@ Utilities for technical documentation, translation, glossary generation, and eng
   A library of 1,000 custom regression models for CurveExpert Professional, covering scientific, engineering, and statistical applications.
   Updated: `2026-07-28`
 
-- [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
-  This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
-  Language: `C++` · Updated: `2026-07-08`
-
 - [**pandoc-markdown-converter**](https://github.com/ricbencar/pandoc-markdown-converter)
   A Python application that converts Markdown documents into DOCX and PDF using Pandoc, with attention to mathematical content, LaTeX compatibility, template discovery.
   Language: `Python` · Updated: `2026-07-08`
@@ -196,12 +209,6 @@ Utilities for technical documentation, translation, glossary generation, and eng
 - [**multilingual-engineering-glossary**](https://github.com/ricbencar/multilingual-engineering-glossary)
   This tool generates a multilingual engineering glossary and table across up to 30 global languages.
   Language: `Python` · Updated: `2026-04-06`
-
-### Other Projects
-
-- [**global-mean-sea-level**](https://github.com/ricbencar/global-mean-sea-level)
-  Physical meaning, mathematical relationships and application of the WGS84 reference ellipsoid, the EGM2008 geoid and the experimental DTU25 mean sea surface referred to 2023.
-  Language: `Python` · Updated: `2026-09-28`
 
 <!-- REPO-LIST:END -->
 
