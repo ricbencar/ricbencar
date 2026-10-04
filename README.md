@@ -60,7 +60,6 @@ All repositories are released under the **MIT License** and they are provided **
   <img src="https://img.shields.io/badge/QGIS-589632?style=flat-square&logo=qgis&logoColor=white" alt="QGIS" />
   <img src="https://img.shields.io/badge/ECMWF%20%2F%20ERA5-003366?style=flat-square" alt="ECMWF ERA5" />
   <img src="https://img.shields.io/badge/GRIB%20%2F%20CDO-475569?style=flat-square" alt="GRIB and CDO" />
-  <img src="https://img.shields.io/badge/Coastal%20Engineering-0F766E?style=flat-square" alt="Coastal Engineering" />
 </p>
 
 ---
