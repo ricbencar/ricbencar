@@ -15,6 +15,8 @@ START_MARKER = "<!-- REPO-LIST:START -->"
 END_MARKER = "<!-- REPO-LIST:END -->"
 FALLBACK_CATEGORY = "Other Projects"
 
+# Category order, introductions, and explicit assignments follow ricbencar.docx.
+# Keywords classify future repositories that are not explicitly assigned below.
 CATEGORY_RULES = {
     "Coastal & Maritime Hydraulic Design": [
         "breakwater",
@@ -25,12 +27,6 @@ CATEGORY_RULES = {
         "coastal protection",
         "revetment",
         "groyne",
-        "navigation",
-        "under keel",
-        "ukc",
-        "pianc",
-        "ship-dimensions",
-        "ship dimensions",
         "depth-of-closure",
         "depth of closure",
         "overtopping",
@@ -56,8 +52,6 @@ CATEGORY_RULES = {
         "wind waves",
         "wind-generated wave",
         "wind generated wave",
-        "wave-forces",
-        "wave forces",
         "sverdrup-munk-bretschneider",
         "sverdrup munk bretschneider",
         "wave-transformation",
@@ -79,15 +73,43 @@ CATEGORY_RULES = {
         "climatology",
         "wind-speed-conversion",
     ],
-    "Engineering Automation, Data Utilities & Productivity": [
+    "Navigation and Ship-Related Utilities": [
+        "navigation",
+        "under keel",
+        "underkeel",
+        "ukc",
+        "pianc",
+        "ship dimensions",
+        "ship characteristics",
+        "restricted water",
+        "canal type waters",
+    ],
+    "GIS & CAD Processing Utilities": [
+        "gis",
+        "cad",
+        "dxf",
+        "dwg",
+        "xyz",
+        "epsg",
+        "coordinate transformation",
+        "coordinate conversion",
+        "reference system",
+        "geospatial",
+        "vector datasets",
+        "global mean sea level",
+        "mean sea surface",
+        "wgs84",
+        "egm2008",
+        "dtu25",
+        "geoid",
+        "vertical datum",
+    ],
+    "Engineering Utilities & Productivity": [
         "pandoc",
         "markdown",
         "translator",
         "translation",
         "glossary",
-        "cad",
-        "dxf",
-        "xyz",
         "data utilities",
         "engineering automation",
         "prismoidal",
@@ -98,7 +120,7 @@ CATEGORY_RULES = {
 
 SECTION_INTROS = {
     "Coastal & Maritime Hydraulic Design": (
-        "Breakwater design, coastal protection, navigation safety, overtopping, and applied maritime hydraulic engineering."
+        "Breakwater design, coastal protection, overtopping, and applied maritime hydraulic engineering."
     ),
     "Wave Mechanics, Transformation & Coastal Processes": (
         "Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes."
@@ -106,9 +128,55 @@ SECTION_INTROS = {
     "Metocean Data, Extremes & Statistical Analysis": (
         "ERA5 workflows, wave and wind statistics, storm characterization, long-term trends, and probabilistic sea-state analysis."
     ),
-    "Engineering Automation, Data Utilities & Productivity": (
-        "Utilities for technical documentation, translation, glossary generation, and engineering data conversion."
+    "Navigation and Ship-Related Utilities": (
+        "Under Keel Clearance (UKC) estimation for shallow, restricted, or canal-type waters and estimation of ship characteristics."
     ),
+    "GIS & CAD Processing Utilities": (
+        "Utilities for conversion of GIS & CAD among reference systems and conversion of CAD drawings into GIS vector datasets."
+    ),
+    "Engineering Utilities & Productivity": (
+        "Utilities for technical documentation, glossary generation, and engineering data conversion."
+    ),
+}
+
+# These assignments take priority over keywords in names, descriptions, topics,
+# and homepages. Keep the exact repository slugs, including existing spellings.
+# The reference document is not needed when running this script.
+REPOSITORY_CATEGORIES = {
+    "antifer-cubes-fine-tuning": "Coastal & Maritime Hydraulic Design",
+    "depth-of-closure-calculator": "Coastal & Maritime Hydraulic Design",
+    "rock-slope-calculator": "Coastal & Maritime Hydraulic Design",
+    "breakwater-cubes-calculator": "Coastal & Maritime Hydraulic Design",
+    "wave-overtopping-calculator": "Coastal & Maritime Hydraulic Design",
+
+    "fenton-nolinear-calculator": "Wave Mechanics, Transformation & Coastal Processes",
+    "wave-dispersion-equation": "Wave Mechanics, Transformation & Coastal Processes",
+    "wave-forces-on-pontoon": "Wave Mechanics, Transformation & Coastal Processes",
+    "wind-waves-generation": "Wave Mechanics, Transformation & Coastal Processes",
+    "shallow-water-waves-calculator": "Wave Mechanics, Transformation & Coastal Processes",
+    "transpose-offshore-to-nearshore": "Wave Mechanics, Transformation & Coastal Processes",
+    "wave-forces-on-piles-calculator": "Wave Mechanics, Transformation & Coastal Processes",
+
+    "wind-speed-conversion": "Metocean Data, Extremes & Statistical Analysis",
+    "era5-wave-wind-data": "Metocean Data, Extremes & Statistical Analysis",
+    "galton-board-statistics": "Metocean Data, Extremes & Statistical Analysis",
+    "wave-wind-statistics": "Metocean Data, Extremes & Statistical Analysis",
+    "extremes-joint-distribuiton": "Metocean Data, Extremes & Statistical Analysis",
+    "storm-peaks-analysis": "Metocean Data, Extremes & Statistical Analysis",
+    "wave-height-trends": "Metocean Data, Extremes & Statistical Analysis",
+
+    "pianc-ship-dimensions": "Navigation and Ship-Related Utilities",
+    "navigation-calculator": "Navigation and Ship-Related Utilities",
+
+    "global-mean-sea-level": "GIS & CAD Processing Utilities",
+    "cad-to-gis-convert": "GIS & CAD Processing Utilities",
+    "cad-epsg-conversion": "GIS & CAD Processing Utilities",
+    "xyz2dxf-points-to-cad": "GIS & CAD Processing Utilities",
+
+    "prismoidal-volume-calculator": "Engineering Utilities & Productivity",
+    "curve-expert-user-models": "Engineering Utilities & Productivity",
+    "pandoc-markdown-converter": "Engineering Utilities & Productivity",
+    "multilingual-engineering-glossary": "Engineering Utilities & Productivity",
 }
 
 
@@ -182,13 +250,19 @@ def clean_description(desc: Optional[str]) -> str:
 
 
 def normalize_text(parts: Iterable[str]) -> str:
-    return " ".join(part.strip().lower() for part in parts if part).strip()
+    text = " ".join(part for part in parts if part).casefold()
+    return " ".join(text.replace("-", " ").replace("_", " ").split())
 
 
 def pick_category(repo: Dict[str, Any]) -> str:
+    name = (repo.get("name") or "").strip().casefold()
+    assigned_category = REPOSITORY_CATEGORIES.get(name)
+    if assigned_category is not None:
+        return assigned_category
+
     haystack = normalize_text(
         [
-            repo.get("name", "").replace("-", " "),
+            name,
             repo.get("description", "") or "",
             " ".join(repo.get("topics", []) or []),
             repo.get("homepage", "") or "",
@@ -199,7 +273,10 @@ def pick_category(repo: Dict[str, Any]) -> str:
     best_score = 0
 
     for category, keywords in CATEGORY_RULES.items():
-        score = sum(1 for keyword in keywords if keyword.lower() in haystack)
+        # Match hyphens, underscores, and spaces consistently, without counting
+        # equivalent keyword spellings more than once.
+        normalized_keywords = {normalize_text([keyword]) for keyword in keywords}
+        score = sum(1 for keyword in normalized_keywords if keyword in haystack)
         if score > best_score:
             best_score = score
             best_category = category
@@ -232,12 +309,7 @@ def build_section(repos: List[Dict[str, Any]]) -> str:
     for repo in repos:
         grouped[pick_category(repo)].append(repo)
 
-    ordered_categories = [
-        "Coastal & Maritime Hydraulic Design",
-        "Wave Mechanics, Transformation & Coastal Processes",
-        "Metocean Data, Extremes & Statistical Analysis",
-        "Engineering Automation, Data Utilities & Productivity",
-    ]
+    ordered_categories = list(CATEGORY_RULES)
     if grouped.get(FALLBACK_CATEGORY):
         ordered_categories.append(FALLBACK_CATEGORY)
 
