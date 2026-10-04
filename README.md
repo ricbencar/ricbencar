@@ -55,7 +55,9 @@ All repositories are released under the **MIT License** and they are provided **
   <img src="https://img.shields.io/badge/Fortran-734F96?style=flat-square&logo=fortran&logoColor=white" alt="Fortran" />
   <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R" />
   <img src="https://img.shields.io/badge/VBA-217346?style=flat-square&logo=microsoft-excel&logoColor=white" alt="VBA" />
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux" />
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=black" alt="Android" />
   <img src="https://img.shields.io/badge/QGIS-589632?style=flat-square&logo=qgis&logoColor=white" alt="QGIS" />
   <img src="https://img.shields.io/badge/ECMWF%20%2F%20ERA5-003366?style=flat-square" alt="ECMWF ERA5" />
   <img src="https://img.shields.io/badge/GRIB%20%2F%20CDO-475569?style=flat-square" alt="GRIB and CDO" />
@@ -67,8 +69,6 @@ All repositories are released under the **MIT License** and they are provided **
 ---
 ## Repositories
 <!-- REPO-LIST:START -->
-
-Automatically generated from my public GitHub repositories (29 current projects).
 
 ### Coastal & Maritime Hydraulic Design
 
