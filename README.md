@@ -74,7 +74,7 @@ Breakwater design, coastal protection, overtopping, and applied maritime hydraul
 
 - [**antifer-cubes-fine-tuning**](https://github.com/ricbencar/antifer-cubes-fine-tuning)
   Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
-  Language: `Jupyter Notebook` · Updated: `2026-10-02`
+  Language: `Jupyter Notebook` · Updated: `2026-10-07` · Stars: `1`
 
 - [**depth-of-closure-calculator**](https://github.com/ricbencar/depth-of-closure-calculator)
   This repository contains computational tools designed to calculate Depth of Closure (DoC).
