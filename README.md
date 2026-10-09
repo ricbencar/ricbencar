@@ -98,7 +98,7 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 - [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation)
   This repository provides a comprehensive suite of approximations of the Wave Dispersion Equation.
-  Language: `Python` · Updated: `2026-10-04` · Stars: `10`
+  Language: `Python` · Updated: `2026-10-08` · Stars: `10`
 
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
