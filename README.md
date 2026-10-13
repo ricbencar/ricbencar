@@ -96,6 +96,10 @@ Breakwater design, coastal protection, overtopping, and applied maritime hydraul
 
 Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore transformation, and shallow-water processes.
 
+- [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
+  Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
+  Language: `Lean` · Updated: `2026-10-13`
+
 - [**wave-dispersion-equation**](https://github.com/ricbencar/wave-dispersion-equation)
   This repository provides a comprehensive suite of approximations of the Wave Dispersion Equation.
   Language: `Python` · Updated: `2026-10-11` · Stars: `10`
@@ -103,10 +107,6 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
   Language: `Jupyter Notebook` · Updated: `2026-10-02`
-
-- [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
-  Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
-  Language: `Python` · Updated: `2026-10-02`
 
 - [**wave-forces-on-pontoon**](https://github.com/ricbencar/wave-forces-on-pontoon)
   Calculator for horizontal environmental actions on a floating pontoon restrained by vertical piles or guides.
