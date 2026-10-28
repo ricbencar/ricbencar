@@ -98,7 +98,7 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
-  Language: `Jupyter Notebook` · Updated: `2026-10-21`
+  Language: `Jupyter Notebook` · Updated: `2026-10-28`
 
 - [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
   Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
