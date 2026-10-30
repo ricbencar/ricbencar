@@ -172,6 +172,10 @@ Under Keel Clearance (UKC) estimation for shallow, restricted, or canal-type wat
 
 Utilities for conversion of GIS & CAD among reference systems and conversion of CAD drawings into GIS vector datasets.
 
+- [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
+  This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
+  Language: `Python` · Updated: `2026-10-29`
+
 - [**cad-to-gis-convert**](https://github.com/ricbencar/cad-to-gis-convert)
   Python application for converting engineering CAD drawings in DXF/DWG format into GIS vector datasets.
   Language: `Python` · Updated: `2026-09-29` · Stars: `1`
@@ -183,10 +187,6 @@ Utilities for conversion of GIS & CAD among reference systems and conversion of 
 - [**cad-epsg-conversion**](https://github.com/ricbencar/cad-epsg-conversion)
   Python tool for precise coordinate transformation of CAD drawings (DXF/DWG) to mainland Portugal's official reference system (PT-TM06/ETRS89 - EPSG:3763).
   Language: `Python` · Updated: `2026-09-23`
-
-- [**xyz2dxf-points-to-cad**](https://github.com/ricbencar/xyz2dxf-points-to-cad)
-  This program reads 3D points in XYZ format, filters them by a minimum distance, interpolates/extrapolates grid values and writes the output to a DXF file.
-  Language: `C++` · Updated: `2026-07-08`
 
 ### Engineering Utilities & Productivity
 
