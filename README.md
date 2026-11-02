@@ -24,11 +24,13 @@
 
 ## Profile
 
-I'm a civil engineer working in **port and coastal engineering, maritime hydraulics and wave mechanics**, with an interest in **technical computation and AI programming**, as illustrated in the tools in this archive. My GitHub profile is centered on **practical engineering tools** for metocean analysis, nonlinear wave calculation, coastal protection design, navigation studies, and technical workflow automation.
+I'm a civil engineer working in **port and coastal engineering, maritime hydraulics and wave mechanics**, with an interest in **technical computation and AI assisted programming**, as illustrated in the tools in this archive. My GitHub profile is centered on **practical engineering tools** for metocean analysis, nonlinear wave calculation, coastal protection design, navigation studies, and technical workflow automation.
 
-The work published here spans a **broad and technical range of engineering topics**. It includes **wave dispersion and nonlinear wave solvers**, **ERA5-based workflows for wave and wind data**, **metocean statistics**, **storm peak and trend analysis**, **extreme value assessment**, **environmental contour generation**, and **joint probability modelling**. It also covers tools for **offshore-to-nearshore wave transposition**, **wave transformation over shallow foreshores**, and **wave overtopping prediction** for a range of **coastal and maritime engineering applications**.
+This work covers several **technical engineering topics**, including wave dispersion, nonlinear solvers, ERA5 workflows, metocean statistics, and joint probability modelling. It features tools for storm peaks, extreme value assessments, and environmental contours.
 
-In addition, it also includes **computational tools for the hydraulic design of breakwaters and rock slopes used in coastal protection**, as well as applications for **navigation studies**, **under-keel clearance assessment**, and **PIANC-based ship-dimension analysis** and **wave loading on piles**. Some repositories focus on engineering workflows through **GIS and CAD processing**, **coordinate and vertical reference systems**, **technical document conversion**, **glossary generation**, **data export**, and related productivity tools.
+For **coastal and maritime engineering**, it handles wave transposition, shallow foreshore transformation, overtopping prediction, and hydraulic design for breakwaters. It also supports navigation studies, under-keel clearance, PIANC ship analysis, and wave loading on piles.
+
+**Workflow productivity tools** include GIS/CAD processing, coordinate reference systems, document conversion, and data export.
 
 All repositories are released under the **MIT License** and they are provided **as is**, without any warranty of accuracy, completeness, fitness for a particular purpose, or suitability for project-critical decisions. They should therefore be used **at the user’s own risk**, with appropriate engineering judgment, independent verification, and technical review before application in professional studies, design, or operational contexts.
 
