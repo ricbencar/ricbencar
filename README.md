@@ -62,7 +62,7 @@ All repositories are released under the **MIT License** and they are provided **
 ## Repositories
 <!-- REPO-LIST:START -->
 
-Automatically generated from my public GitHub repositories (29 current projects).
+Automatically generated from my public GitHub repositories (30 current projects).
 
 ### Coastal & Maritime Hydraulic Design
 
@@ -94,7 +94,7 @@ Wave theory, dispersion, nonlinear waves, wave loading, offshore-to-nearshore tr
 
 - [**fenton-nolinear-calculator**](https://github.com/ricbencar/fenton-nolinear-calculator)
   Compute the wavelength, free-surface geometry, kinematics, and integral invariants of nonlinear waves in finite depth.
-  Language: `Lean` · Updated: `2026-11-12`
+  Language: `Lean` · Updated: `2026-11-13` · Stars: `1`
 
 - [**shallow-water-waves-calculator**](https://github.com/ricbencar/shallow-water-waves-calculator)
   This program computes local shallow-foreshore wave-height distribution parameters based on the Composite Weibull distribution model.
@@ -203,6 +203,12 @@ Utilities for technical documentation, glossary generation, and engineering data
 - [**multilingual-engineering-glossary**](https://github.com/ricbencar/multilingual-engineering-glossary)
   This tool generates a multilingual engineering glossary and table across up to 30 global languages.
   Language: `Python` · Updated: `2026-04-06`
+
+### Other Projects
+
+- [**baycraft-beach-stability**](https://github.com/ricbencar/baycraft-beach-stability)
+  Baycraft calculator models parabolic coastal equilibrium planforms on imagery using polynomial regressions of the Hsu and Evans (1989) and Oliveira and Barreiro (2010) models.
+  Language: `Python` · Updated: `2026-11-14`
 
 <!-- REPO-LIST:END -->
 
