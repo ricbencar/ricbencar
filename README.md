@@ -70,7 +70,7 @@ Breakwater design, coastal protection, overtopping, and applied maritime hydraul
 
 - [**baycraft-beach-stability**](https://github.com/ricbencar/baycraft-beach-stability)
   Baycraft calculator models parabolic coastal equilibrium planforms on imagery using polynomial regressions of the Hsu and Evans (1989) and Oliveira and Barreiro (2010) models.
-  Language: `Python` · Updated: `2026-11-14`
+  Language: `Rust` · Updated: `2026-11-16`
 
 - [**antifer-cubes-fine-tuning**](https://github.com/ricbencar/antifer-cubes-fine-tuning)
   Vectorial CAD/BIM generator and technical reference for Pita (1986) and Carvalho (2026) concrete Antifer cube geometry, volume normalisation, and IFC/STL/OBJ/DXF export.
