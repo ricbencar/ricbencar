@@ -148,6 +148,7 @@ REPOSITORY_CATEGORIES = {
     "rock-slope-calculator": "Coastal & Maritime Hydraulic Design",
     "breakwater-cubes-calculator": "Coastal & Maritime Hydraulic Design",
     "wave-overtopping-calculator": "Coastal & Maritime Hydraulic Design",
+    "baycraft-beach-stability": "Coastal & Maritime Hydraulic Design",
 
     "fenton-nolinear-calculator": "Wave Mechanics, Transformation & Coastal Processes",
     "wave-dispersion-equation": "Wave Mechanics, Transformation & Coastal Processes",
